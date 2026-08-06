@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#08130f">
+  <title>Albion Route — Routes d'Avalon</title>
+  <meta name="description" content="Créez et partagez des itinéraires Albion Online avec les routes d'Avalon.">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#"><span class="brand-mark">AR</span><span><strong>Albion Route</strong><small>Cartographie communautaire</small></span></a>
+    <div class="status"><span id="statusDot"></span><span id="apiStatus">Connexion…</span></div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <p class="eyebrow">ALBION ONLINE • ROUTES D'AVALON</p>
+        <h1>Trouvez votre chemin.<br><em>Avant la fermeture.</em></h1>
+        <p>Combinez les passages permanents avec les portails temporaires découverts par les joueurs. Les portails expirés sont exclus automatiquement.</p>
+      </div>
+      <div class="stats">
+        <div><strong id="mapCount">—</strong><span>cartes</span></div>
+        <div><strong id="avalonCount">—</strong><span>Avalon</span></div>
+        <div><strong id="portalCount">—</strong><span>portails actifs</span></div>
+      </div>
+    </section>
+
+    <nav class="tabs" aria-label="Sections">
+      <button class="tab active" data-tab="route">Calculer un itinéraire</button>
+      <button class="tab" data-tab="portals">Ajouter un portail</button>
+      <button class="tab" data-tab="catalog">Cartes d'Avalon</button>
+    </nav>
+
+    <section id="route" class="panel tab-panel active">
+      <div class="panel-head"><div><span class="step">01</span><h2>Planifier le trajet</h2></div><span class="network" id="networkStatus">Réseau en chargement</span></div>
+      <div class="route-grid">
+        <label>Départ<input id="routeFrom" list="allMaps" placeholder="Rechercher une carte…" autocomplete="off"></label>
+        <button id="swapRoute" class="swap" title="Inverser">⇄</button>
+        <label>Destination<input id="routeTo" list="allMaps" placeholder="Rechercher une carte…" autocomplete="off"></label>
+        <label>Taille du groupe<select id="groupSize"><option value="7">1 à 7 joueurs</option><option value="20">8 à 20 joueurs</option></select></label>
+        <button id="calculate" class="primary">Calculer le meilleur chemin</button>
+      </div>
+      <div id="routeResult" class="route-result empty">Choisissez un départ et une destination.</div>
+    </section>
+
+    <section id="portals" class="panel tab-panel">
+      <div class="panel-head"><div><span class="step">02</span><h2>Signaler un portail</h2></div><span>Partagé avec tous les joueurs</span></div>
+      <form id="portalForm" class="portal-form">
+        <label>Depuis<input id="portalFrom" list="allMaps" required placeholder="Carte actuelle"></label>
+        <label>Vers<input id="portalTo" list="allMaps" required placeholder="Destination du portail"></label>
+        <label>Capacité<select id="capacity"><option value="7">7 personnes</option><option value="20">20 personnes</option></select></label>
+        <label>Temps restant<div class="duration"><input id="duration" type="number" min="2" max="1440" value="60" required><select id="durationUnit"><option value="minutes">minutes</option><option value="hours">heures</option></select></div></label>
+        <button class="primary" type="submit">Enregistrer le portail</button>
+      </form>
+      <div class="list-head"><h3>Portails actifs</h3><button id="refreshPortals" class="ghost">Actualiser</button></div>
+      <div id="portalList" class="portal-list"></div>
+    </section>
+
+    <section id="catalog" class="panel tab-panel">
+      <div class="panel-head"><div><span class="step">03</span><h2>Catalogue d'Avalon</h2></div><span id="catalogCount"></span></div>
+      <div class="filters">
+        <input id="catalogSearch" placeholder="Rechercher une carte Avalon…">
+        <select id="tierFilter"><option value="">Tous les tiers</option><option value="4">T4</option><option value="5">T5</option><option value="6">T6</option><option value="7">T7</option><option value="8">T8</option></select>
+        <select id="shapeFilter"><option value="">Toutes les formes</option><option value="c">C</option><option value="f">F</option><option value="h">H</option><option value="o">O</option><option value="p">P</option><option value="s">S</option><option value="t">T</option><option value="x">X</option><option value="rest">Rest</option></select>
+      </div>
+      <div id="catalogGrid" class="catalog-grid"></div>
+    </section>
+
+    <datalist id="allMaps"></datalist>
+  </main>
+
+  <footer><span>Albion Route</span><span>Les connexions d'Avalon sont saisies par les joueurs et ne proviennent pas d'une API temps réel.</span></footer>
+  <div id="toast" role="status"></div>
+  <script src="/app.js" defer></script>
+</body>
+</html>
