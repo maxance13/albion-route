@@ -62,7 +62,15 @@
         <label>Depuis<input id="portalFrom" list="allMaps" required placeholder="Carte actuelle"></label>
         <label>Vers<input id="portalTo" list="allMaps" required placeholder="Destination du portail"></label>
         <label>Capacité<select id="capacity"><option value="7">7 personnes</option><option value="20">20 personnes</option></select></label>
-        <label>Temps restant<div class="duration"><input id="duration" type="number" min="2" max="1440" value="60" required><select id="durationUnit"><option value="minutes">minutes</option><option value="hours">heures</option></select></div></label>
+        <label>Temps restant exact
+          <div class="duration exact-duration">
+            <input id="durationHours" type="number" min="0" max="23" value="1" required aria-label="Heures restantes">
+            <span>h</span>
+            <input id="durationMinutes" type="number" min="0" max="59" value="0" required aria-label="Minutes restantes">
+            <span>min</span>
+          </div>
+          <small class="field-help">Précision à la minute — de 2 min à 23 h 59 min</small>
+        </label>
         <button class="primary" type="submit">Enregistrer le portail</button>
       </form>
       <div class="list-head"><h3>Portails actifs</h3><button id="refreshPortals" class="ghost">Actualiser</button></div>
