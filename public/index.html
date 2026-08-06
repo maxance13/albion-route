@@ -11,7 +11,16 @@
 <body>
   <header class="topbar">
     <a class="brand" href="#"><span class="brand-mark">AR</span><span><strong>Albion Route</strong><small>Cartographie communautaire</small></span></a>
-    <div class="status"><span id="statusDot"></span><span id="apiStatus">Connexion…</span></div>
+    <div class="header-actions">
+      <label class="server-picker">Serveur
+        <select id="gameServer" aria-label="Serveur Albion">
+          <option value="europe">Europe</option>
+          <option value="americas">Amériques</option>
+          <option value="asia">Asie</option>
+        </select>
+      </label>
+      <div class="status"><span id="statusDot"></span><span id="apiStatus">Connexion…</span></div>
+    </div>
   </header>
 
   <main>
@@ -32,6 +41,7 @@
       <button class="tab active" data-tab="route">Calculer un itinéraire</button>
       <button class="tab" data-tab="portals">Ajouter un portail</button>
       <button class="tab" data-tab="catalog">Cartes d'Avalon</button>
+      <button class="tab" data-tab="network">Carte communautaire</button>
     </nav>
 
     <section id="route" class="panel tab-panel active">
@@ -67,6 +77,30 @@
         <select id="shapeFilter"><option value="">Toutes les formes</option><option value="c">C</option><option value="f">F</option><option value="h">H</option><option value="o">O</option><option value="p">P</option><option value="s">S</option><option value="t">T</option><option value="x">X</option><option value="rest">Rest</option></select>
       </div>
       <div id="catalogGrid" class="catalog-grid"></div>
+    </section>
+
+    <section id="network" class="panel tab-panel">
+      <div class="panel-head">
+        <div><span class="step">04</span><h2>Carte communautaire des portails</h2></div>
+        <span id="networkCount">0 passage actif</span>
+      </div>
+      <p class="network-intro">Tous les portails signalés par les joueurs sur le serveur sélectionné apparaissent ici. La carte s'actualise automatiquement.</p>
+      <div class="network-tools">
+        <input id="networkSearch" placeholder="Rechercher une carte…">
+        <select id="networkCapacity">
+          <option value="">Toutes les capacités</option>
+          <option value="7">Portails 7 personnes</option>
+          <option value="20">Portails 20 personnes</option>
+        </select>
+        <button id="refreshNetwork" class="ghost">Actualiser</button>
+      </div>
+      <div id="portalNetwork" class="portal-network"></div>
+      <div class="network-legend">
+        <span><i class="life-long"></i> Plus d'une heure</span>
+        <span><i class="life-medium"></i> 15 à 60 minutes</span>
+        <span><i class="life-short"></i> Moins de 15 minutes</span>
+      </div>
+      <p class="network-hint">Clique sur une carte du graphe pour la sélectionner dans le calculateur d'itinéraire.</p>
     </section>
 
     <datalist id="allMaps"></datalist>
