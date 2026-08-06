@@ -13,6 +13,13 @@
     "tier": 6
   },
   {
+    "mapID": "arthurs-rest",
+    "mapName": "Arthur's Rest",
+    "mapType": "outlands",
+    "tier": 6,
+    "category": "Outlands"
+  },
+  {
     "mapID": "aspenwood",
     "mapName": "Aspenwood",
     "mapType": "royalYellow",
@@ -215,6 +222,20 @@
     "tier": 3
   },
   {
+    "mapID": "bridgewatch",
+    "mapName": "Bridgewatch",
+    "mapType": "royalBlue",
+    "tier": 4,
+    "category": "Royal City"
+  },
+  {
+    "mapID": "bridgewatch-portal",
+    "mapName": "Bridgewatch Portal",
+    "mapType": "outlands",
+    "tier": 6,
+    "category": "Outlands"
+  },
+  {
     "mapID": "broken-fell",
     "mapName": "Broken Fell",
     "mapType": "royalRed",
@@ -234,6 +255,13 @@
     "mapType": "royalBlue",
     "tier": 3,
     "category": "Fort Sterling RC"
+  },
+  {
+    "mapID": "caerleon",
+    "mapName": "Caerleon",
+    "mapType": "royalRed",
+    "tier": 6,
+    "category": "Royal City"
   },
   {
     "mapID": "cairn-camain",
@@ -2013,6 +2041,13 @@
     "category": "Lymhurst RC"
   },
   {
+    "mapID": "forest-cross",
+    "mapName": "Forest Cross",
+    "mapType": "royalBlue",
+    "tier": 4,
+    "category": "Royal City"
+  },
+  {
     "mapID": "foritos-aiaylos",
     "mapName": "Foritos-Aiaylos",
     "mapType": "roads",
@@ -2054,6 +2089,20 @@
     "socketCount": 8,
     "largeSocketCount": 2,
     "smallSocketCount": 6
+  },
+  {
+    "mapID": "fort-sterling",
+    "mapName": "Fort Sterling",
+    "mapType": "royalBlue",
+    "tier": 4,
+    "category": "Royal City"
+  },
+  {
+    "mapID": "fort-sterling-portal",
+    "mapName": "Fort Sterling Portal",
+    "mapType": "outlands",
+    "tier": 6,
+    "category": "Outlands"
   },
   {
     "mapID": "foues-aeaosum",
@@ -2815,6 +2864,13 @@
     "category": "Lymhurst RC"
   },
   {
+    "mapID": "highland-cross",
+    "mapName": "Highland Cross",
+    "mapType": "royalBlue",
+    "tier": 4,
+    "category": "Royal City"
+  },
+  {
     "mapID": "highstone-grassland",
     "mapName": "Highstone Grassland",
     "mapType": "outlands",
@@ -3478,6 +3534,20 @@
     "category": "Caerleon RC"
   },
   {
+    "mapID": "lymhurst",
+    "mapName": "Lymhurst",
+    "mapType": "royalBlue",
+    "tier": 4,
+    "category": "Royal City"
+  },
+  {
+    "mapID": "lymhurst-portal",
+    "mapName": "Lymhurst Portal",
+    "mapType": "outlands",
+    "tier": 6,
+    "category": "Outlands"
+  },
+  {
     "mapID": "malag-crevasse",
     "mapName": "Malag Crevasse",
     "mapType": "royalRed",
@@ -3490,6 +3560,20 @@
     "mapType": "royalRed",
     "tier": 6,
     "category": "Caerleon RC"
+  },
+  {
+    "mapID": "martlock",
+    "mapName": "Martlock",
+    "mapType": "royalBlue",
+    "tier": 4,
+    "category": "Royal City"
+  },
+  {
+    "mapID": "martlock-portal",
+    "mapName": "Martlock Portal",
+    "mapType": "outlands",
+    "tier": 6,
+    "category": "Outlands"
   },
   {
     "mapID": "mase-knoll",
@@ -3532,6 +3616,27 @@
     "mapType": "outlands",
     "tier": 7,
     "category": "Outlands"
+  },
+  {
+    "mapID": "merlyns-rest",
+    "mapName": "Merlyn's Rest",
+    "mapType": "outlands",
+    "tier": 6,
+    "category": "Outlands"
+  },
+  {
+    "mapID": "morganas-rest",
+    "mapName": "Morgana's Rest",
+    "mapType": "outlands",
+    "tier": 6,
+    "category": "Outlands"
+  },
+  {
+    "mapID": "mountain-cross",
+    "mapName": "Mountain Cross",
+    "mapType": "royalBlue",
+    "tier": 4,
+    "category": "Royal City"
   },
   {
     "mapID": "mudfoot-mounds",
@@ -6779,6 +6884,13 @@
     "category": "Lymhurst RC"
   },
   {
+    "mapID": "steppe-cross",
+    "mapName": "Steppe Cross",
+    "mapType": "royalBlue",
+    "tier": 4,
+    "category": "Royal City"
+  },
+  {
     "mapID": "stinkhag",
     "mapName": "Stinkhag",
     "mapType": "royalBlue",
@@ -6991,6 +7103,13 @@
     "mapType": "royalRed",
     "tier": 7,
     "category": "Thetford RC"
+  },
+  {
+    "mapID": "swamp-cross",
+    "mapName": "Swamp Cross",
+    "mapType": "royalBlue",
+    "tier": 4,
+    "category": "Royal City"
   },
   {
     "mapID": "swiftsands-basin",
@@ -7234,6 +7353,20 @@
     "mapName": "The Underway",
     "mapType": "royalRed",
     "tier": 7
+  },
+  {
+    "mapID": "thetford",
+    "mapName": "Thetford",
+    "mapType": "royalBlue",
+    "tier": 4,
+    "category": "Royal City"
+  },
+  {
+    "mapID": "thetford-portal",
+    "mapName": "Thetford Portal",
+    "mapType": "outlands",
+    "tier": 6,
+    "category": "Outlands"
   },
   {
     "mapID": "thirstwater-gully",
