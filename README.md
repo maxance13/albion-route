@@ -23,3 +23,7 @@ DATABASE_URL=postgresql://... npm start
 ```
 
 Le site est indépendant de Sandbox Interactive GmbH et d'Albion Online.
+
+## Réseau permanent intégré
+
+Le dépôt embarque 636 liaisons fixes entre les zones royales et les Outlands, afin que le calcul ne dépende pas d'un service externe au démarrage. Le graphe est dérivé des données de zones publiques d'[Albion Navigator](https://github.com/SugarF0x/albion-navigator), tandis que le catalogue des cartes provient d'[Albion Roads Mapper](https://github.com/dignityofwar/albionroads).
