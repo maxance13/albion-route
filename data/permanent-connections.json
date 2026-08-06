@@ -1,0 +1,3187 @@
+{
+  "source": "Albion Navigator zone graph",
+  "updatedAt": "2026-08-06",
+  "count": 636,
+  "edges": [
+    {
+      "from": "Adrens Hill",
+      "to": "Garrow Fell",
+      "type": "permanent"
+    },
+    {
+      "from": "Anklesnag Mire",
+      "to": "Creag Meagir",
+      "type": "permanent"
+    },
+    {
+      "from": "Arthur's Rest",
+      "to": "Whitewall Pass",
+      "type": "permanent"
+    },
+    {
+      "from": "Astolat",
+      "to": "Flimmerair Steppe",
+      "type": "permanent"
+    },
+    {
+      "from": "Astolat",
+      "to": "Kindlegrass Steppe",
+      "type": "permanent"
+    },
+    {
+      "from": "Astolat",
+      "to": "Shiftshadow Expanse",
+      "type": "permanent"
+    },
+    {
+      "from": "Avalanche Ravine",
+      "to": "Avalanche Incline",
+      "type": "permanent"
+    },
+    {
+      "from": "Battlebrae Flatland",
+      "to": "Battlebrae Meadow",
+      "type": "permanent"
+    },
+    {
+      "from": "Battlebrae Flatland",
+      "to": "Highstone Loch",
+      "type": "permanent"
+    },
+    {
+      "from": "Battlebrae Grassland",
+      "to": "Arthur's Rest",
+      "type": "permanent"
+    },
+    {
+      "from": "Battlebrae Lake",
+      "to": "Battlebrae Grassland",
+      "type": "permanent"
+    },
+    {
+      "from": "Battlebrae Lake",
+      "to": "Battlebrae Peaks",
+      "type": "permanent"
+    },
+    {
+      "from": "Battlebrae Meadow",
+      "to": "Arthur's Rest",
+      "type": "permanent"
+    },
+    {
+      "from": "Battlebrae Peaks",
+      "to": "Arthur's Rest",
+      "type": "permanent"
+    },
+    {
+      "from": "Battlebrae Peaks",
+      "to": "Whitewall Ridge",
+      "type": "permanent"
+    },
+    {
+      "from": "Battlebrae Plain",
+      "to": "Battlebrae Grassland",
+      "type": "permanent"
+    },
+    {
+      "from": "Battlebrae Plain",
+      "to": "Battlebrae Meadow",
+      "type": "permanent"
+    },
+    {
+      "from": "Birchcopse",
+      "to": "Flynsdell",
+      "type": "permanent"
+    },
+    {
+      "from": "Birchcopse",
+      "to": "Redlake",
+      "type": "permanent"
+    },
+    {
+      "from": "Birken Fell",
+      "to": "Malag Crevasse",
+      "type": "permanent"
+    },
+    {
+      "from": "Birken Fell",
+      "to": "Mardale",
+      "type": "permanent"
+    },
+    {
+      "from": "Black Monastery",
+      "to": "Murdergulch Gap",
+      "type": "permanent"
+    },
+    {
+      "from": "Blackthorn Quarry",
+      "to": "Adrens Hill",
+      "type": "permanent"
+    },
+    {
+      "from": "Blackthorn Quarry",
+      "to": "Haldon Tor",
+      "type": "permanent"
+    },
+    {
+      "from": "Bleachskull Desert",
+      "to": "Highstone Plateau",
+      "type": "permanent"
+    },
+    {
+      "from": "Bleachskull Desert",
+      "to": "Windgrass Fields",
+      "type": "permanent"
+    },
+    {
+      "from": "Bleachskull Steppe",
+      "to": "Bleachskull Desert",
+      "type": "permanent"
+    },
+    {
+      "from": "Bleachskull Steppe",
+      "to": "Windgrass Border",
+      "type": "permanent"
+    },
+    {
+      "from": "Bonepool Marsh",
+      "to": "Curlew Fen",
+      "type": "permanent"
+    },
+    {
+      "from": "Bonepool Marsh",
+      "to": "Lewsdon Hill",
+      "type": "permanent"
+    },
+    {
+      "from": "Braemore Upland",
+      "to": "Braemore Lowland",
+      "type": "permanent"
+    },
+    {
+      "from": "Brambleshore Hinterlands",
+      "to": "Everwinter Reach",
+      "type": "permanent"
+    },
+    {
+      "from": "Brent Knoll",
+      "to": "Mase Knoll",
+      "type": "permanent"
+    },
+    {
+      "from": "Bridgewatch Portal",
+      "to": "Farshore Bay",
+      "type": "permanent"
+    },
+    {
+      "from": "Bridgewatch Portal",
+      "to": "Sandrift Coast",
+      "type": "permanent"
+    },
+    {
+      "from": "Bridgewatch Portal",
+      "to": "Sandrift Prairie",
+      "type": "permanent"
+    },
+    {
+      "from": "Bridgewatch Portal",
+      "to": "Sandrift Shore",
+      "type": "permanent"
+    },
+    {
+      "from": "Bridgewatch Portal",
+      "to": "Sandrift Steppe",
+      "type": "permanent"
+    },
+    {
+      "from": "Bridgewatch",
+      "to": "Bridgewatch Portal",
+      "type": "permanent"
+    },
+    {
+      "from": "Bridgewatch",
+      "to": "Fractured Ground",
+      "type": "permanent"
+    },
+    {
+      "from": "Bridgewatch",
+      "to": "Lazygrass Plain",
+      "type": "permanent"
+    },
+    {
+      "from": "Bridgewatch",
+      "to": "Longmarch Meadow",
+      "type": "permanent"
+    },
+    {
+      "from": "Bridgewatch",
+      "to": "Smoothfloor Cleft",
+      "type": "permanent"
+    },
+    {
+      "from": "Brons Hill",
+      "to": "Bellever Tor",
+      "type": "permanent"
+    },
+    {
+      "from": "Brons Hill",
+      "to": "Felniks Hill",
+      "type": "permanent"
+    },
+    {
+      "from": "Bryn Gorge",
+      "to": "Crose Gorge",
+      "type": "permanent"
+    },
+    {
+      "from": "Bryn Gorge",
+      "to": "Pen Gent",
+      "type": "permanent"
+    },
+    {
+      "from": "Bryn Gorge",
+      "to": "Pen Uchaf",
+      "type": "permanent"
+    },
+    {
+      "from": "Caerleon",
+      "to": "Birken Fell",
+      "type": "permanent"
+    },
+    {
+      "from": "Caerleon",
+      "to": "Creag Morr",
+      "type": "permanent"
+    },
+    {
+      "from": "Cairn Camain",
+      "to": "Cairn Fidair",
+      "type": "permanent"
+    },
+    {
+      "from": "Cairn Darg",
+      "to": "Cairn Drain",
+      "type": "permanent"
+    },
+    {
+      "from": "Cairn Gorm",
+      "to": "Cairn Cloch",
+      "type": "permanent"
+    },
+    {
+      "from": "Cairn Gorm",
+      "to": "Cairn Fidair",
+      "type": "permanent"
+    },
+    {
+      "from": "Cairn Gorm",
+      "to": "Cairn Glascore",
+      "type": "permanent"
+    },
+    {
+      "from": "Camlann",
+      "to": "Anklesnag Mire",
+      "type": "permanent"
+    },
+    {
+      "from": "Camlann",
+      "to": "Dusktree Swamp",
+      "type": "permanent"
+    },
+    {
+      "from": "Camlann",
+      "to": "Malag Crevasse",
+      "type": "permanent"
+    },
+    {
+      "from": "Camlann",
+      "to": "Stumprot Swamp",
+      "type": "permanent"
+    },
+    {
+      "from": "Carns Hill",
+      "to": "Adrens Hill",
+      "type": "permanent"
+    },
+    {
+      "from": "Carns Hill",
+      "to": "Felniks Hill",
+      "type": "permanent"
+    },
+    {
+      "from": "Caulder Fissure",
+      "to": "Cairn Cloch",
+      "type": "permanent"
+    },
+    {
+      "from": "Cedarcopse",
+      "to": "Pen Kerrig",
+      "type": "permanent"
+    },
+    {
+      "from": "Chillhag",
+      "to": "Gwan Gorge",
+      "type": "permanent"
+    },
+    {
+      "from": "Chillhag",
+      "to": "Stinkhag",
+      "type": "permanent"
+    },
+    {
+      "from": "Citadel of Ash",
+      "to": "Everwinter Incline",
+      "type": "permanent"
+    },
+    {
+      "from": "Cracked Earth",
+      "to": "Dryfield Meadow",
+      "type": "permanent"
+    },
+    {
+      "from": "Creag Garr",
+      "to": "Creag Dhor",
+      "type": "permanent"
+    },
+    {
+      "from": "Creag Garr",
+      "to": "Domhain Chasm",
+      "type": "permanent"
+    },
+    {
+      "from": "Creag Meagir",
+      "to": "Domhain Chasm",
+      "type": "permanent"
+    },
+    {
+      "from": "Croker Hill",
+      "to": "Adrens Hill",
+      "type": "permanent"
+    },
+    {
+      "from": "Croker Hill",
+      "to": "Bellever Tor",
+      "type": "permanent"
+    },
+    {
+      "from": "Croker Hill",
+      "to": "Felniks Hill",
+      "type": "permanent"
+    },
+    {
+      "from": "Croker Hill",
+      "to": "Haldon Tor",
+      "type": "permanent"
+    },
+    {
+      "from": "Curlew Fen",
+      "to": "Haytor",
+      "type": "permanent"
+    },
+    {
+      "from": "Curlew Fen",
+      "to": "Slimehag",
+      "type": "permanent"
+    },
+    {
+      "from": "Daemonium Keep",
+      "to": "Frostspring Volcano",
+      "type": "permanent"
+    },
+    {
+      "from": "Darkbough Snag",
+      "to": "Iceburn Firth",
+      "type": "permanent"
+    },
+    {
+      "from": "Darkbough Snag",
+      "to": "Thunderrock Ascent",
+      "type": "permanent"
+    },
+    {
+      "from": "Darkground Swamp",
+      "to": "Anklesnag Mire",
+      "type": "permanent"
+    },
+    {
+      "from": "Darkground Swamp",
+      "to": "Cairn Glascore",
+      "type": "permanent"
+    },
+    {
+      "from": "Darkground Swamp",
+      "to": "Dusktree Swamp",
+      "type": "permanent"
+    },
+    {
+      "from": "Deadpine Forest",
+      "to": "Glacierfall Canyon",
+      "type": "permanent"
+    },
+    {
+      "from": "Deadpine Forest",
+      "to": "Glacierfall Fissure",
+      "type": "permanent"
+    },
+    {
+      "from": "Deadvein Gully",
+      "to": "Shiftshadow Expanse",
+      "type": "permanent"
+    },
+    {
+      "from": "Deathreach Priory",
+      "to": "Battlebrae Flatland",
+      "type": "permanent"
+    },
+    {
+      "from": "Deathreach Priory",
+      "to": "Gravemound Knoll",
+      "type": "permanent"
+    },
+    {
+      "from": "Deathwisp Bog",
+      "to": "Black Monastery",
+      "type": "permanent"
+    },
+    {
+      "from": "Deathwisp Bog",
+      "to": "Murdergulch Ravine",
+      "type": "permanent"
+    },
+    {
+      "from": "Deathwisp Bog",
+      "to": "Razorrock Chasm",
+      "type": "permanent"
+    },
+    {
+      "from": "Deathwisp Sink",
+      "to": "Black Monastery",
+      "type": "permanent"
+    },
+    {
+      "from": "Deathwisp Sink",
+      "to": "Driftwood Hollow",
+      "type": "permanent"
+    },
+    {
+      "from": "Deathwisp Sink",
+      "to": "Murdergulch Divide",
+      "type": "permanent"
+    },
+    {
+      "from": "Deeproot Wood",
+      "to": "Goldshimmer Plain",
+      "type": "permanent"
+    },
+    {
+      "from": "Deepwood Copse",
+      "to": "Eldersleep",
+      "type": "permanent"
+    },
+    {
+      "from": "Deepwood Copse",
+      "to": "Glacierfall Valley",
+      "type": "permanent"
+    },
+    {
+      "from": "Deepwood Copse",
+      "to": "Iceburn Peaks",
+      "type": "permanent"
+    },
+    {
+      "from": "Deepwood Dell",
+      "to": "Deepwood Pines",
+      "type": "permanent"
+    },
+    {
+      "from": "Deepwood Dell",
+      "to": "Whitebank Cross",
+      "type": "permanent"
+    },
+    {
+      "from": "Deepwood Dell",
+      "to": "Whitebank Shore",
+      "type": "permanent"
+    },
+    {
+      "from": "Deepwood Gorge",
+      "to": "Glacierfall Passage",
+      "type": "permanent"
+    },
+    {
+      "from": "Deepwood Gorge",
+      "to": "Iceburn Cliffs",
+      "type": "permanent"
+    },
+    {
+      "from": "Deepwood Gorge",
+      "to": "Whitebank Cross",
+      "type": "permanent"
+    },
+    {
+      "from": "Deepwood Pines",
+      "to": "Floatshoal Fissure",
+      "type": "permanent"
+    },
+    {
+      "from": "Dewleaf Fen",
+      "to": "Bonepool Marsh",
+      "type": "permanent"
+    },
+    {
+      "from": "Dewleaf Fen",
+      "to": "Curlew Fen",
+      "type": "permanent"
+    },
+    {
+      "from": "Dewleaf Fen",
+      "to": "Fog Fen",
+      "type": "permanent"
+    },
+    {
+      "from": "Driftwood Glen",
+      "to": "Avalanche Ravine",
+      "type": "permanent"
+    },
+    {
+      "from": "Driftwood Hollow",
+      "to": "Razorrock Passage",
+      "type": "permanent"
+    },
+    {
+      "from": "Driftwood Vale",
+      "to": "Avalanche Incline",
+      "type": "permanent"
+    },
+    {
+      "from": "Driftwood Vale",
+      "to": "Driftwood Glen",
+      "type": "permanent"
+    },
+    {
+      "from": "Driftwood Vale",
+      "to": "Driftwood Hollow",
+      "type": "permanent"
+    },
+    {
+      "from": "Driftwood Vale",
+      "to": "Murdergulch Trail",
+      "type": "permanent"
+    },
+    {
+      "from": "Drownfield Course",
+      "to": "Citadel of Ash",
+      "type": "permanent"
+    },
+    {
+      "from": "Drownfield Course",
+      "to": "Drownfield Wetland",
+      "type": "permanent"
+    },
+    {
+      "from": "Drownfield Fen",
+      "to": "Drownfield Quag",
+      "type": "permanent"
+    },
+    {
+      "from": "Drownfield Fen",
+      "to": "Drownfield Rut",
+      "type": "permanent"
+    },
+    {
+      "from": "Drownfield Fen",
+      "to": "Glacierfall Pass",
+      "type": "permanent"
+    },
+    {
+      "from": "Drownfield Mire",
+      "to": "Citadel of Ash",
+      "type": "permanent"
+    },
+    {
+      "from": "Drownfield Mire",
+      "to": "Drownfield Slough",
+      "type": "permanent"
+    },
+    {
+      "from": "Drownfield Mire",
+      "to": "Drownfield Wetland",
+      "type": "permanent"
+    },
+    {
+      "from": "Drownfield Mire",
+      "to": "Whitepeak Tundra",
+      "type": "permanent"
+    },
+    {
+      "from": "Drownfield Quag",
+      "to": "Whitepeak Ascent",
+      "type": "permanent"
+    },
+    {
+      "from": "Drownfield Quag",
+      "to": "Whitepeak Tundra",
+      "type": "permanent"
+    },
+    {
+      "from": "Drownfield Rut",
+      "to": "Drownfield Sink",
+      "type": "permanent"
+    },
+    {
+      "from": "Drownfield Rut",
+      "to": "Murdergulch Divide",
+      "type": "permanent"
+    },
+    {
+      "from": "Drownfield Sink",
+      "to": "Deadpine Forest",
+      "type": "permanent"
+    },
+    {
+      "from": "Drownfield Slough",
+      "to": "Skysand Ridge",
+      "type": "permanent"
+    },
+    {
+      "from": "Drownfield Wetland",
+      "to": "Timberscar Copse",
+      "type": "permanent"
+    },
+    {
+      "from": "Drownfield Wetland",
+      "to": "Timberscar Dell",
+      "type": "permanent"
+    },
+    {
+      "from": "Drownhorse Basin",
+      "to": "Cairn Cloch",
+      "type": "permanent"
+    },
+    {
+      "from": "Drownhorse Basin",
+      "to": "Pen Fenair",
+      "type": "permanent"
+    },
+    {
+      "from": "Drybasin Riverbed",
+      "to": "Drybasin Oasis",
+      "type": "permanent"
+    },
+    {
+      "from": "Drytop Riverbed",
+      "to": "Drytop Pillars",
+      "type": "permanent"
+    },
+    {
+      "from": "Dryvein Cross",
+      "to": "Battlebrae Peaks",
+      "type": "permanent"
+    },
+    {
+      "from": "Dryvein Cross",
+      "to": "Dryvein Confluence",
+      "type": "permanent"
+    },
+    {
+      "from": "Dryvein Cross",
+      "to": "Dryvein Oasis",
+      "type": "permanent"
+    },
+    {
+      "from": "Dryvein End",
+      "to": "Dryvein Confluence",
+      "type": "permanent"
+    },
+    {
+      "from": "Dryvein Oasis",
+      "to": "Stonelake Hillock",
+      "type": "permanent"
+    },
+    {
+      "from": "Dryvein Plain",
+      "to": "Dryvein Oasis",
+      "type": "permanent"
+    },
+    {
+      "from": "Dryvein Plain",
+      "to": "Sandrift Dunes",
+      "type": "permanent"
+    },
+    {
+      "from": "Dryvein Riverbed",
+      "to": "Dryvein Confluence",
+      "type": "permanent"
+    },
+    {
+      "from": "Dryvein Riverbed",
+      "to": "Dryvein Steppe",
+      "type": "permanent"
+    },
+    {
+      "from": "Dryvein Steppe",
+      "to": "Daemonium Keep",
+      "type": "permanent"
+    },
+    {
+      "from": "Dryvein Steppe",
+      "to": "Firesink Trench",
+      "type": "permanent"
+    },
+    {
+      "from": "Drywater Meadow",
+      "to": "Longmarch Meadow",
+      "type": "permanent"
+    },
+    {
+      "from": "Drywater Meadow",
+      "to": "Sandgust Cleft",
+      "type": "permanent"
+    },
+    {
+      "from": "Drywater Meadow",
+      "to": "Snapshaft Trough",
+      "type": "permanent"
+    },
+    {
+      "from": "Dusklight Fen",
+      "to": "Falsestep Marsh",
+      "type": "permanent"
+    },
+    {
+      "from": "Eldersleep",
+      "to": "Glacierfall Canyon",
+      "type": "permanent"
+    },
+    {
+      "from": "Eldersleep",
+      "to": "Glacierfall Fissure",
+      "type": "permanent"
+    },
+    {
+      "from": "Eldon Hill",
+      "to": "Gutras Hill",
+      "type": "permanent"
+    },
+    {
+      "from": "Everwinter Crossing",
+      "to": "Everwinter Gorge",
+      "type": "permanent"
+    },
+    {
+      "from": "Everwinter Crossing",
+      "to": "Everwinter Plain",
+      "type": "permanent"
+    },
+    {
+      "from": "Everwinter Crossing",
+      "to": "Whitebank Ridge",
+      "type": "permanent"
+    },
+    {
+      "from": "Everwinter Expanse",
+      "to": "Everwinter Incline",
+      "type": "permanent"
+    },
+    {
+      "from": "Everwinter Gorge",
+      "to": "Everwinter Gap",
+      "type": "permanent"
+    },
+    {
+      "from": "Everwinter Peak",
+      "to": "Everwinter Incline",
+      "type": "permanent"
+    },
+    {
+      "from": "Everwinter Peak",
+      "to": "Everwinter Passage",
+      "type": "permanent"
+    },
+    {
+      "from": "Everwinter Reach",
+      "to": "Everwinter Passage",
+      "type": "permanent"
+    },
+    {
+      "from": "Everwinter Shores",
+      "to": "Everwinter Expanse",
+      "type": "permanent"
+    },
+    {
+      "from": "Eye of the Forest",
+      "to": "Flammog Desolation",
+      "type": "permanent"
+    },
+    {
+      "from": "Farshore Bay",
+      "to": "Farshore Cape",
+      "type": "permanent"
+    },
+    {
+      "from": "Farshore Bay",
+      "to": "Stonelake Fields",
+      "type": "permanent"
+    },
+    {
+      "from": "Farshore Esker",
+      "to": "Farshore Drylands",
+      "type": "permanent"
+    },
+    {
+      "from": "Farshore Esker",
+      "to": "Farshore Heath",
+      "type": "permanent"
+    },
+    {
+      "from": "Farshore Esker",
+      "to": "Whitewall Pass",
+      "type": "permanent"
+    },
+    {
+      "from": "Farshore Heath",
+      "to": "Stonelake Hillock",
+      "type": "permanent"
+    },
+    {
+      "from": "Farshore Lagoon",
+      "to": "Farshore Cape",
+      "type": "permanent"
+    },
+    {
+      "from": "Farshore Lagoon",
+      "to": "Stonelake Fields",
+      "type": "permanent"
+    },
+    {
+      "from": "Ferndell",
+      "to": "Cracked Earth",
+      "type": "permanent"
+    },
+    {
+      "from": "Firesink Caldera",
+      "to": "Firesink Trench",
+      "type": "permanent"
+    },
+    {
+      "from": "Flammog Fork",
+      "to": "Flammog Valley",
+      "type": "permanent"
+    },
+    {
+      "from": "Flammog Valley",
+      "to": "Flammog Desolation",
+      "type": "permanent"
+    },
+    {
+      "from": "Flatriver Trough",
+      "to": "Carns Hill",
+      "type": "permanent"
+    },
+    {
+      "from": "Flatriver Trough",
+      "to": "Redstone Plain",
+      "type": "permanent"
+    },
+    {
+      "from": "Flatrock Cliffs",
+      "to": "Flatrock Plateau",
+      "type": "permanent"
+    },
+    {
+      "from": "Floatshoal Fissure",
+      "to": "Floatshoal Bight",
+      "type": "permanent"
+    },
+    {
+      "from": "Floatshoal Floe",
+      "to": "Floatshoal Fissure",
+      "type": "permanent"
+    },
+    {
+      "from": "Fog Fen",
+      "to": "Falsestep Marsh",
+      "type": "permanent"
+    },
+    {
+      "from": "Forest Cross",
+      "to": "Cracked Earth",
+      "type": "permanent"
+    },
+    {
+      "from": "Forest Cross",
+      "to": "Redlake",
+      "type": "permanent"
+    },
+    {
+      "from": "Forest Cross",
+      "to": "Stagbourne",
+      "type": "permanent"
+    },
+    {
+      "from": "Fort Sterling Portal",
+      "to": "Frostpeak Vista",
+      "type": "permanent"
+    },
+    {
+      "from": "Fort Sterling Portal",
+      "to": "Whitebank Cross",
+      "type": "permanent"
+    },
+    {
+      "from": "Fort Sterling Portal",
+      "to": "Whitebank Descent",
+      "type": "permanent"
+    },
+    {
+      "from": "Fort Sterling Portal",
+      "to": "Whitebank Shore",
+      "type": "permanent"
+    },
+    {
+      "from": "Fort Sterling Portal",
+      "to": "Whitebank Stream",
+      "type": "permanent"
+    },
+    {
+      "from": "Fort Sterling",
+      "to": "Cairn Camain",
+      "type": "permanent"
+    },
+    {
+      "from": "Fort Sterling",
+      "to": "Crose Gorge",
+      "type": "permanent"
+    },
+    {
+      "from": "Fort Sterling",
+      "to": "Fort Sterling Portal",
+      "type": "permanent"
+    },
+    {
+      "from": "Fort Sterling",
+      "to": "Mawar Gorge",
+      "type": "permanent"
+    },
+    {
+      "from": "Fort Sterling",
+      "to": "Pen Gent",
+      "type": "permanent"
+    },
+    {
+      "from": "Fractured Ground",
+      "to": "Prospector's Hope",
+      "type": "permanent"
+    },
+    {
+      "from": "Fractured Ground",
+      "to": "Vixen Tor",
+      "type": "permanent"
+    },
+    {
+      "from": "Frostbite Chasm",
+      "to": "Frostbite Mountain",
+      "type": "permanent"
+    },
+    {
+      "from": "Frostpeak Ascent",
+      "to": "Floatshoal Bight",
+      "type": "permanent"
+    },
+    {
+      "from": "Frostpeak Vista",
+      "to": "Frostpeak Ascent",
+      "type": "permanent"
+    },
+    {
+      "from": "Frostseep Ravine",
+      "to": "Frostseep Crevasse",
+      "type": "permanent"
+    },
+    {
+      "from": "Frostspring Passage",
+      "to": "Frostspring Volcano",
+      "type": "permanent"
+    },
+    {
+      "from": "Garrow Fell",
+      "to": "Broken Fell",
+      "type": "permanent"
+    },
+    {
+      "from": "Garrow Fell",
+      "to": "Runnel Sink",
+      "type": "permanent"
+    },
+    {
+      "from": "Giantweald Copse",
+      "to": "Eye of the Forest",
+      "type": "permanent"
+    },
+    {
+      "from": "Giantweald Copse",
+      "to": "Flammog Valley",
+      "type": "permanent"
+    },
+    {
+      "from": "Giantweald Copse",
+      "to": "Giantweald Roots",
+      "type": "permanent"
+    },
+    {
+      "from": "Giantweald Dale",
+      "to": "Giantweald Edge",
+      "type": "permanent"
+    },
+    {
+      "from": "Giantweald Dale",
+      "to": "Giantweald Woods",
+      "type": "permanent"
+    },
+    {
+      "from": "Giantweald Dale",
+      "to": "Munten Fell",
+      "type": "permanent"
+    },
+    {
+      "from": "Giantweald Dale",
+      "to": "Munten Tundra",
+      "type": "permanent"
+    },
+    {
+      "from": "Giantweald Edge",
+      "to": "Drybasin Oasis",
+      "type": "permanent"
+    },
+    {
+      "from": "Giantweald Edge",
+      "to": "Flatrock Plateau",
+      "type": "permanent"
+    },
+    {
+      "from": "Giantweald Roots",
+      "to": "Giantweald Glade",
+      "type": "permanent"
+    },
+    {
+      "from": "Giantweald Roots",
+      "to": "Thunderrock Upland",
+      "type": "permanent"
+    },
+    {
+      "from": "Giantweald Woods",
+      "to": "Drybasin Oasis",
+      "type": "permanent"
+    },
+    {
+      "from": "Giantweald Woods",
+      "to": "Eye of the Forest",
+      "type": "permanent"
+    },
+    {
+      "from": "Glacierfall Cross",
+      "to": "Glacierfall Pass",
+      "type": "permanent"
+    },
+    {
+      "from": "Glacierfall Cross",
+      "to": "Glacierfall Valley",
+      "type": "permanent"
+    },
+    {
+      "from": "Glacierfall Passage",
+      "to": "Glacierfall Valley",
+      "type": "permanent"
+    },
+    {
+      "from": "Gravemound Brim",
+      "to": "Gravemound Cliffs",
+      "type": "permanent"
+    },
+    {
+      "from": "Gravemound Brim",
+      "to": "Gravemound Slope",
+      "type": "permanent"
+    },
+    {
+      "from": "Gravemound Hills",
+      "to": "Gravemound Cliffs",
+      "type": "permanent"
+    },
+    {
+      "from": "Gravemound Hills",
+      "to": "Gravemound Slope",
+      "type": "permanent"
+    },
+    {
+      "from": "Greenhollow Copse",
+      "to": "Gravemound Knoll",
+      "type": "permanent"
+    },
+    {
+      "from": "Greenhollow Copse",
+      "to": "Gravemound Slope",
+      "type": "permanent"
+    },
+    {
+      "from": "Greenhollow Copse",
+      "to": "Windgrass Terrace",
+      "type": "permanent"
+    },
+    {
+      "from": "Greenhollow Vale",
+      "to": "Greenhollow Copse",
+      "type": "permanent"
+    },
+    {
+      "from": "Greenhollow Vale",
+      "to": "Highstone Grassland",
+      "type": "permanent"
+    },
+    {
+      "from": "Greenhollow Vale",
+      "to": "Highstone Loch",
+      "type": "permanent"
+    },
+    {
+      "from": "Greenshore Bay",
+      "to": "Flatrock Cliffs",
+      "type": "permanent"
+    },
+    {
+      "from": "Greenshore Peninsula",
+      "to": "Flatrock Plateau",
+      "type": "permanent"
+    },
+    {
+      "from": "Greenshore Peninsula",
+      "to": "Greenshore Bay",
+      "type": "permanent"
+    },
+    {
+      "from": "Greenshore Peninsula",
+      "to": "Slakesands Mesa",
+      "type": "permanent"
+    },
+    {
+      "from": "Gutras Hill",
+      "to": "Blackthorn Quarry",
+      "type": "permanent"
+    },
+    {
+      "from": "Haldon Tor",
+      "to": "Bellever Tor",
+      "type": "permanent"
+    },
+    {
+      "from": "Haytor",
+      "to": "Brent Knoll",
+      "type": "permanent"
+    },
+    {
+      "from": "Highbole Glen",
+      "to": "Hornbeam Wood",
+      "type": "permanent"
+    },
+    {
+      "from": "Highbole Glen",
+      "to": "Murkweald",
+      "type": "permanent"
+    },
+    {
+      "from": "Highbole Glen",
+      "to": "Nightbloom Forest",
+      "type": "permanent"
+    },
+    {
+      "from": "Highbole Glen",
+      "to": "Owlsong Glen",
+      "type": "permanent"
+    },
+    {
+      "from": "Highland Cross",
+      "to": "Brent Knoll",
+      "type": "permanent"
+    },
+    {
+      "from": "Highland Cross",
+      "to": "Mase Knoll",
+      "type": "permanent"
+    },
+    {
+      "from": "Highstone Grassland",
+      "to": "Windgrass Fields",
+      "type": "permanent"
+    },
+    {
+      "from": "Highstone Meadow",
+      "to": "Highstone Plains",
+      "type": "permanent"
+    },
+    {
+      "from": "Highstone Meadow",
+      "to": "Highstone Plateau",
+      "type": "permanent"
+    },
+    {
+      "from": "Highstone Meadow",
+      "to": "Razorrock Verge",
+      "type": "permanent"
+    },
+    {
+      "from": "Highstone Mound",
+      "to": "Highstone Plateau",
+      "type": "permanent"
+    },
+    {
+      "from": "Highstone Plains",
+      "to": "Highstone Loch",
+      "type": "permanent"
+    },
+    {
+      "from": "Hightree Borderlands",
+      "to": "Firesink Caldera",
+      "type": "permanent"
+    },
+    {
+      "from": "Hightree Borderlands",
+      "to": "Hightree Hillock",
+      "type": "permanent"
+    },
+    {
+      "from": "Hightree Borderlands",
+      "to": "Thunderrock Rapids",
+      "type": "permanent"
+    },
+    {
+      "from": "Hightree Cliffs",
+      "to": "Whitecliff Expanse",
+      "type": "permanent"
+    },
+    {
+      "from": "Hightree Dale",
+      "to": "Hightree Isle",
+      "type": "permanent"
+    },
+    {
+      "from": "Hightree Enclave",
+      "to": "Hightree Cliffs",
+      "type": "permanent"
+    },
+    {
+      "from": "Hightree Enclave",
+      "to": "Hightree Levee",
+      "type": "permanent"
+    },
+    {
+      "from": "Hightree Glade",
+      "to": "Hightree Cliffs",
+      "type": "permanent"
+    },
+    {
+      "from": "Hightree Glade",
+      "to": "Hightree Isle",
+      "type": "permanent"
+    },
+    {
+      "from": "Hightree Isle",
+      "to": "Glacierbreak Summit",
+      "type": "permanent"
+    },
+    {
+      "from": "Hightree Lake",
+      "to": "Hightree Pass",
+      "type": "permanent"
+    },
+    {
+      "from": "Hightree Lake",
+      "to": "Thunderrock Rapids",
+      "type": "permanent"
+    },
+    {
+      "from": "Hightree Levee",
+      "to": "Thirstwater Steppe",
+      "type": "permanent"
+    },
+    {
+      "from": "Hightree Levee",
+      "to": "Thirstwater Waste",
+      "type": "permanent"
+    },
+    {
+      "from": "Hightree Pass",
+      "to": "Munten Tundra",
+      "type": "permanent"
+    },
+    {
+      "from": "Hightree Steep",
+      "to": "Hightree Pass",
+      "type": "permanent"
+    },
+    {
+      "from": "Hightree Strand",
+      "to": "Hightree Hillock",
+      "type": "permanent"
+    },
+    {
+      "from": "Hightree Strand",
+      "to": "Hightree Levee",
+      "type": "permanent"
+    },
+    {
+      "from": "Hornbeam Wood",
+      "to": "Deeproot Wood",
+      "type": "permanent"
+    },
+    {
+      "from": "Iceburn Firth",
+      "to": "Iceburn Tundra",
+      "type": "permanent"
+    },
+    {
+      "from": "Iceburn Peaks",
+      "to": "Iceburn Cliffs",
+      "type": "permanent"
+    },
+    {
+      "from": "Iceburn Peaks",
+      "to": "Iceburn Tundra",
+      "type": "permanent"
+    },
+    {
+      "from": "Inis Mon",
+      "to": "Aspenwood",
+      "type": "permanent"
+    },
+    {
+      "from": "Inis Mon",
+      "to": "Cairn Darg",
+      "type": "permanent"
+    },
+    {
+      "from": "Inis Mon",
+      "to": "Owlsong Glen",
+      "type": "permanent"
+    },
+    {
+      "from": "Inis Mon",
+      "to": "Rowanwood",
+      "type": "permanent"
+    },
+    {
+      "from": "Kilmar Tor",
+      "to": "Brons Hill",
+      "type": "permanent"
+    },
+    {
+      "from": "Kindlegrass Steppe",
+      "to": "Flimmerair Steppe",
+      "type": "permanent"
+    },
+    {
+      "from": "Kindlegrass Steppe",
+      "to": "Longshadow Plain",
+      "type": "permanent"
+    },
+    {
+      "from": "Larchroad",
+      "to": "Cedarcopse",
+      "type": "permanent"
+    },
+    {
+      "from": "Larchroad",
+      "to": "Crose Gorge",
+      "type": "permanent"
+    },
+    {
+      "from": "Larchroad",
+      "to": "Mawar Gorge",
+      "type": "permanent"
+    },
+    {
+      "from": "Larchroad",
+      "to": "Mountain Cross",
+      "type": "permanent"
+    },
+    {
+      "from": "Lazygrass Plain",
+      "to": "Snapshaft Trough",
+      "type": "permanent"
+    },
+    {
+      "from": "Lewsdon Hill",
+      "to": "Eldon Hill",
+      "type": "permanent"
+    },
+    {
+      "from": "Longfen Arms",
+      "to": "Farshore Drylands",
+      "type": "permanent"
+    },
+    {
+      "from": "Longfen Arms",
+      "to": "Gravemound Hills",
+      "type": "permanent"
+    },
+    {
+      "from": "Longfen Arms",
+      "to": "Redtree Enclave",
+      "type": "permanent"
+    },
+    {
+      "from": "Longfen Marsh",
+      "to": "Farshore Esker",
+      "type": "permanent"
+    },
+    {
+      "from": "Longfen Marsh",
+      "to": "Gravemound Knoll",
+      "type": "permanent"
+    },
+    {
+      "from": "Longfen Veins",
+      "to": "Deathreach Priory",
+      "type": "permanent"
+    },
+    {
+      "from": "Longfen Veins",
+      "to": "Whitewall Pass",
+      "type": "permanent"
+    },
+    {
+      "from": "Longmarch Meadow",
+      "to": "Prospector's Hope",
+      "type": "permanent"
+    },
+    {
+      "from": "Longtimber Glen",
+      "to": "Creag Morr",
+      "type": "permanent"
+    },
+    {
+      "from": "Longtimber Glen",
+      "to": "Nightbloom Forest",
+      "type": "permanent"
+    },
+    {
+      "from": "Longtimber Glen",
+      "to": "Wyre Forest",
+      "type": "permanent"
+    },
+    {
+      "from": "Lymhurst Portal",
+      "to": "Hightree Dale",
+      "type": "permanent"
+    },
+    {
+      "from": "Lymhurst Portal",
+      "to": "Hightree Enclave",
+      "type": "permanent"
+    },
+    {
+      "from": "Lymhurst Portal",
+      "to": "Hightree Glade",
+      "type": "permanent"
+    },
+    {
+      "from": "Lymhurst Portal",
+      "to": "Hightree Lake",
+      "type": "permanent"
+    },
+    {
+      "from": "Lymhurst Portal",
+      "to": "Hightree Steep",
+      "type": "permanent"
+    },
+    {
+      "from": "Lymhurst Portal",
+      "to": "Hightree Strand",
+      "type": "permanent"
+    },
+    {
+      "from": "Lymhurst Portal",
+      "to": "Watchwood Grove",
+      "type": "permanent"
+    },
+    {
+      "from": "Lymhurst Portal",
+      "to": "Watchwood Precipice",
+      "type": "permanent"
+    },
+    {
+      "from": "Lymhurst",
+      "to": "Birchcopse",
+      "type": "permanent"
+    },
+    {
+      "from": "Lymhurst",
+      "to": "Ferndell",
+      "type": "permanent"
+    },
+    {
+      "from": "Lymhurst",
+      "to": "Lymhurst Portal",
+      "type": "permanent"
+    },
+    {
+      "from": "Lymhurst",
+      "to": "Stagbourne",
+      "type": "permanent"
+    },
+    {
+      "from": "Lymhurst",
+      "to": "Yew Wood",
+      "type": "permanent"
+    },
+    {
+      "from": "Malag Crevasse",
+      "to": "Creag Meagir",
+      "type": "permanent"
+    },
+    {
+      "from": "Malag Crevasse",
+      "to": "Creag Morr",
+      "type": "permanent"
+    },
+    {
+      "from": "Mardale",
+      "to": "Runnel Sink",
+      "type": "permanent"
+    },
+    {
+      "from": "Martlock Portal",
+      "to": "Windgrass Border",
+      "type": "permanent"
+    },
+    {
+      "from": "Martlock Portal",
+      "to": "Windgrass Gully",
+      "type": "permanent"
+    },
+    {
+      "from": "Martlock Portal",
+      "to": "Windgrass Precipice",
+      "type": "permanent"
+    },
+    {
+      "from": "Martlock Portal",
+      "to": "Windgrass Rill",
+      "type": "permanent"
+    },
+    {
+      "from": "Martlock",
+      "to": "Blackthorn Quarry",
+      "type": "permanent"
+    },
+    {
+      "from": "Martlock",
+      "to": "Eldon Hill",
+      "type": "permanent"
+    },
+    {
+      "from": "Martlock",
+      "to": "Haytor",
+      "type": "permanent"
+    },
+    {
+      "from": "Martlock",
+      "to": "Martlock Portal",
+      "type": "permanent"
+    },
+    {
+      "from": "Martlock",
+      "to": "Mase Knoll",
+      "type": "permanent"
+    },
+    {
+      "from": "Mase Knoll",
+      "to": "Haldon Tor",
+      "type": "permanent"
+    },
+    {
+      "from": "Meltwater Bog",
+      "to": "Everwinter Gorge",
+      "type": "permanent"
+    },
+    {
+      "from": "Meltwater Bog",
+      "to": "Meltwater Channel",
+      "type": "permanent"
+    },
+    {
+      "from": "Meltwater Channel",
+      "to": "Everwinter Gap",
+      "type": "permanent"
+    },
+    {
+      "from": "Meltwater Channel",
+      "to": "Glacierfall Cross",
+      "type": "permanent"
+    },
+    {
+      "from": "Meltwater Delta",
+      "to": "Meltwater Sump",
+      "type": "permanent"
+    },
+    {
+      "from": "Meltwater Delta",
+      "to": "Whitebank Descent",
+      "type": "permanent"
+    },
+    {
+      "from": "Meltwater Sump",
+      "to": "Everwinter Passage",
+      "type": "permanent"
+    },
+    {
+      "from": "Meltwater Sump",
+      "to": "Everwinter Plain",
+      "type": "permanent"
+    },
+    {
+      "from": "Merlyn's Rest",
+      "to": "Giantweald Copse",
+      "type": "permanent"
+    },
+    {
+      "from": "Merlyn's Rest",
+      "to": "Giantweald Glade",
+      "type": "permanent"
+    },
+    {
+      "from": "Merlyn's Rest",
+      "to": "Giantweald Woods",
+      "type": "permanent"
+    },
+    {
+      "from": "Morgana's Rest",
+      "to": "Drownfield Fen",
+      "type": "permanent"
+    },
+    {
+      "from": "Morgana's Rest",
+      "to": "Drownfield Slough",
+      "type": "permanent"
+    },
+    {
+      "from": "Morgana's Rest",
+      "to": "Everwinter Gap",
+      "type": "permanent"
+    },
+    {
+      "from": "Morgana's Rest",
+      "to": "Glacierfall Cross",
+      "type": "permanent"
+    },
+    {
+      "from": "Mountain Cross",
+      "to": "Bryn Gorge",
+      "type": "permanent"
+    },
+    {
+      "from": "Mountain Cross",
+      "to": "Crose Gorge",
+      "type": "permanent"
+    },
+    {
+      "from": "Mudfoot Sump",
+      "to": "Martlock Portal",
+      "type": "permanent"
+    },
+    {
+      "from": "Mudfoot Sump",
+      "to": "Mudfoot Mounds",
+      "type": "permanent"
+    },
+    {
+      "from": "Mudfoot Sump",
+      "to": "Windgrass Terrace",
+      "type": "permanent"
+    },
+    {
+      "from": "Munten Rise",
+      "to": "Munten Fell",
+      "type": "permanent"
+    },
+    {
+      "from": "Munten Rise",
+      "to": "Munten Tundra",
+      "type": "permanent"
+    },
+    {
+      "from": "Murdergulch Cross",
+      "to": "Murdergulch Divide",
+      "type": "permanent"
+    },
+    {
+      "from": "Murdergulch Cross",
+      "to": "Murdergulch Trail",
+      "type": "permanent"
+    },
+    {
+      "from": "Murdergulch Cross",
+      "to": "Whitepeak Ascent",
+      "type": "permanent"
+    },
+    {
+      "from": "Murdergulch Gap",
+      "to": "Murdergulch Divide",
+      "type": "permanent"
+    },
+    {
+      "from": "Murdergulch Gap",
+      "to": "Murdergulch Ravine",
+      "type": "permanent"
+    },
+    {
+      "from": "Murkweald",
+      "to": "Flimmerair Steppe",
+      "type": "permanent"
+    },
+    {
+      "from": "Murkweald",
+      "to": "Goldshimmer Plain",
+      "type": "permanent"
+    },
+    {
+      "from": "Murkweald",
+      "to": "Wyre Forest",
+      "type": "permanent"
+    },
+    {
+      "from": "Murky Fen",
+      "to": "Drownhorse Basin",
+      "type": "permanent"
+    },
+    {
+      "from": "Murky Fen",
+      "to": "Gwan Gorge",
+      "type": "permanent"
+    },
+    {
+      "from": "Murky Fen",
+      "to": "Pen Fenair",
+      "type": "permanent"
+    },
+    {
+      "from": "Nightbloom Forest",
+      "to": "Cairn Drain",
+      "type": "permanent"
+    },
+    {
+      "from": "Nightbloom Forest",
+      "to": "Domhain Chasm",
+      "type": "permanent"
+    },
+    {
+      "from": "Nightcreak Marsh",
+      "to": "Dusktree Swamp",
+      "type": "permanent"
+    },
+    {
+      "from": "Nightcreak Marsh",
+      "to": "Slithertail Marsh",
+      "type": "permanent"
+    },
+    {
+      "from": "Northstrand Dunes",
+      "to": "Northstrand Beach",
+      "type": "permanent"
+    },
+    {
+      "from": "Oakcopse",
+      "to": "Aspenwood",
+      "type": "permanent"
+    },
+    {
+      "from": "Oakcopse",
+      "to": "Flynsdell",
+      "type": "permanent"
+    },
+    {
+      "from": "Owlsong Glen",
+      "to": "Cairn Drain",
+      "type": "permanent"
+    },
+    {
+      "from": "Parchsand Cliffs",
+      "to": "Highstone Loch",
+      "type": "permanent"
+    },
+    {
+      "from": "Parchsand Cliffs",
+      "to": "Parchsand Drought",
+      "type": "permanent"
+    },
+    {
+      "from": "Parchsand Cliffs",
+      "to": "Razorrock Edge",
+      "type": "permanent"
+    },
+    {
+      "from": "Parchsand Drought",
+      "to": "Battlebrae Plain",
+      "type": "permanent"
+    },
+    {
+      "from": "Parchsand Drought",
+      "to": "Razorrock Valley",
+      "type": "permanent"
+    },
+    {
+      "from": "Parchthroat Plain",
+      "to": "Drywater Meadow",
+      "type": "permanent"
+    },
+    {
+      "from": "Parchthroat Plain",
+      "to": "Longshadow Plain",
+      "type": "permanent"
+    },
+    {
+      "from": "Parchthroat Plain",
+      "to": "Sandgust Cleft",
+      "type": "permanent"
+    },
+    {
+      "from": "Pen Fenair",
+      "to": "Caulder Fissure",
+      "type": "permanent"
+    },
+    {
+      "from": "Pen Fenair",
+      "to": "Pen Uchaf",
+      "type": "permanent"
+    },
+    {
+      "from": "Pen Garn",
+      "to": "Cairn Gorm",
+      "type": "permanent"
+    },
+    {
+      "from": "Pen Garn",
+      "to": "Caulder Fissure",
+      "type": "permanent"
+    },
+    {
+      "from": "Pen Garn",
+      "to": "Pen Gent",
+      "type": "permanent"
+    },
+    {
+      "from": "Pen Garn",
+      "to": "Pen Uchaf",
+      "type": "permanent"
+    },
+    {
+      "from": "Pen Kerrig",
+      "to": "Cairn Darg",
+      "type": "permanent"
+    },
+    {
+      "from": "Pen Kerrig",
+      "to": "Mawar Gorge",
+      "type": "permanent"
+    },
+    {
+      "from": "Pinecopse",
+      "to": "Dryfield Meadow",
+      "type": "permanent"
+    },
+    {
+      "from": "Pinecopse",
+      "to": "Parchthroat Plain",
+      "type": "permanent"
+    },
+    {
+      "from": "Pinecopse",
+      "to": "Spindlewood",
+      "type": "permanent"
+    },
+    {
+      "from": "Pinecopse",
+      "to": "Steelhide Meadow",
+      "type": "permanent"
+    },
+    {
+      "from": "Razorrock Bank",
+      "to": "Razorrock Gulch",
+      "type": "permanent"
+    },
+    {
+      "from": "Razorrock Edge",
+      "to": "Razorrock Verge",
+      "type": "permanent"
+    },
+    {
+      "from": "Razorrock Passage",
+      "to": "Razorrock Chasm",
+      "type": "permanent"
+    },
+    {
+      "from": "Razorrock Ravine",
+      "to": "Razorrock Gulch",
+      "type": "permanent"
+    },
+    {
+      "from": "Razorrock Valley",
+      "to": "Razorrock Bank",
+      "type": "permanent"
+    },
+    {
+      "from": "Razorrock Valley",
+      "to": "Razorrock Chasm",
+      "type": "permanent"
+    },
+    {
+      "from": "Razorrock Valley",
+      "to": "Razorrock Edge",
+      "type": "permanent"
+    },
+    {
+      "from": "Razorrock Verge",
+      "to": "Avalanche Incline",
+      "type": "permanent"
+    },
+    {
+      "from": "Redlake",
+      "to": "Stagbourne",
+      "type": "permanent"
+    },
+    {
+      "from": "Redstone Plain",
+      "to": "Felniks Hill",
+      "type": "permanent"
+    },
+    {
+      "from": "Redstone Plain",
+      "to": "Kilmar Tor",
+      "type": "permanent"
+    },
+    {
+      "from": "Rivercopse Crossing",
+      "to": "Rivercopse Curve",
+      "type": "permanent"
+    },
+    {
+      "from": "Rivercopse Crossing",
+      "to": "Rivercopse Fount",
+      "type": "permanent"
+    },
+    {
+      "from": "Rivercopse Crossing",
+      "to": "Rivercopse Path",
+      "type": "permanent"
+    },
+    {
+      "from": "Rivercopse Crossing",
+      "to": "Wailing Bulwark",
+      "type": "permanent"
+    },
+    {
+      "from": "Rivercopse Curve",
+      "to": "Thunderrock Upland",
+      "type": "permanent"
+    },
+    {
+      "from": "Rivercopse Fount",
+      "to": "Flammog Fork",
+      "type": "permanent"
+    },
+    {
+      "from": "Rivercopse Fount",
+      "to": "Thunderrock Ascent",
+      "type": "permanent"
+    },
+    {
+      "from": "Rivercopse Fount",
+      "to": "Thunderrock Upland",
+      "type": "permanent"
+    },
+    {
+      "from": "Rivercopse Path",
+      "to": "Sunfang Ravine",
+      "type": "permanent"
+    },
+    {
+      "from": "Roastcorpse Steppe",
+      "to": "Broken Fell",
+      "type": "permanent"
+    },
+    {
+      "from": "Roastcorpse Steppe",
+      "to": "Caerleon",
+      "type": "permanent"
+    },
+    {
+      "from": "Roastcorpse Steppe",
+      "to": "Deadvein Gully",
+      "type": "permanent"
+    },
+    {
+      "from": "Roastcorpse Steppe",
+      "to": "Mardale",
+      "type": "permanent"
+    },
+    {
+      "from": "Rowanwood",
+      "to": "Oakcopse",
+      "type": "permanent"
+    },
+    {
+      "from": "Rowanwood",
+      "to": "Pen Kerrig",
+      "type": "permanent"
+    },
+    {
+      "from": "Runnelvein Bog",
+      "to": "Floatshoal Floe",
+      "type": "permanent"
+    },
+    {
+      "from": "Runnelvein Bog",
+      "to": "Iceburn Cliffs",
+      "type": "permanent"
+    },
+    {
+      "from": "Runnelvein Sink",
+      "to": "Flammog Valley",
+      "type": "permanent"
+    },
+    {
+      "from": "Runnelvein Slough",
+      "to": "Flammog Desolation",
+      "type": "permanent"
+    },
+    {
+      "from": "Runnelvein Slough",
+      "to": "Iceburn Peaks",
+      "type": "permanent"
+    },
+    {
+      "from": "Runnelvein Slough",
+      "to": "Runnelvein Bog",
+      "type": "permanent"
+    },
+    {
+      "from": "Runnelvein Slough",
+      "to": "Runnelvein Sink",
+      "type": "permanent"
+    },
+    {
+      "from": "Russerdell",
+      "to": "Cedarcopse",
+      "type": "permanent"
+    },
+    {
+      "from": "Russerdell",
+      "to": "Oakcopse",
+      "type": "permanent"
+    },
+    {
+      "from": "Russerdell",
+      "to": "Rowanwood",
+      "type": "permanent"
+    },
+    {
+      "from": "Saddle Tor",
+      "to": "Bellever Tor",
+      "type": "permanent"
+    },
+    {
+      "from": "Saddle Tor",
+      "to": "Brons Hill",
+      "type": "permanent"
+    },
+    {
+      "from": "Saddle Tor",
+      "to": "Kilmar Tor",
+      "type": "permanent"
+    },
+    {
+      "from": "Sandmount Ascent",
+      "to": "Braemore Upland",
+      "type": "permanent"
+    },
+    {
+      "from": "Sandmount Desert",
+      "to": "Windgrass Coast",
+      "type": "permanent"
+    },
+    {
+      "from": "Sandmount Esker",
+      "to": "Frostbite Chasm",
+      "type": "permanent"
+    },
+    {
+      "from": "Sandmount Esker",
+      "to": "Sandmount Desert",
+      "type": "permanent"
+    },
+    {
+      "from": "Sandmount Strand",
+      "to": "Braemore Lowland",
+      "type": "permanent"
+    },
+    {
+      "from": "Sandmount Strand",
+      "to": "Sandmount Ascent",
+      "type": "permanent"
+    },
+    {
+      "from": "Sandrift Coast",
+      "to": "Sandrift Expanse",
+      "type": "permanent"
+    },
+    {
+      "from": "Sandrift Coast",
+      "to": "Sandrift Fringe",
+      "type": "permanent"
+    },
+    {
+      "from": "Sandrift Expanse",
+      "to": "Frostspring Passage",
+      "type": "permanent"
+    },
+    {
+      "from": "Sandrift Prairie",
+      "to": "Sandrift Dunes",
+      "type": "permanent"
+    },
+    {
+      "from": "Sandrift Prairie",
+      "to": "Stonelake Fields",
+      "type": "permanent"
+    },
+    {
+      "from": "Sandrift Shore",
+      "to": "Sandrift Fringe",
+      "type": "permanent"
+    },
+    {
+      "from": "Sandrift Steppe",
+      "to": "Sandrift Dunes",
+      "type": "permanent"
+    },
+    {
+      "from": "Sandrift Steppe",
+      "to": "Sandrift Expanse",
+      "type": "permanent"
+    },
+    {
+      "from": "Scuttlesink Marsh",
+      "to": "Brambleshore Hinterlands",
+      "type": "permanent"
+    },
+    {
+      "from": "Scuttlesink Mouth",
+      "to": "Brambleshore Hinterlands",
+      "type": "permanent"
+    },
+    {
+      "from": "Scuttlesink Pools",
+      "to": "Scuttlesink Marsh",
+      "type": "permanent"
+    },
+    {
+      "from": "Scuttlesink Pools",
+      "to": "Scuttlesink Mouth",
+      "type": "permanent"
+    },
+    {
+      "from": "Scuttlesink Pools",
+      "to": "Timbertop Dale",
+      "type": "permanent"
+    },
+    {
+      "from": "Shaleheath Hills",
+      "to": "Everwinter Shores",
+      "type": "permanent"
+    },
+    {
+      "from": "Shaleheath Hills",
+      "to": "Shaleheath Steep",
+      "type": "permanent"
+    },
+    {
+      "from": "Shaleheath Steep",
+      "to": "Everwinter Expanse",
+      "type": "permanent"
+    },
+    {
+      "from": "Shiftshadow Expanse",
+      "to": "Broken Fell",
+      "type": "permanent"
+    },
+    {
+      "from": "Shiftshadow Expanse",
+      "to": "Flatriver Trough",
+      "type": "permanent"
+    },
+    {
+      "from": "Skullmarsh Lower",
+      "to": "Glacierbreak Summit",
+      "type": "permanent"
+    },
+    {
+      "from": "Skullmarsh Lower",
+      "to": "Skullmarsh Upper",
+      "type": "permanent"
+    },
+    {
+      "from": "Skullmarsh Lower",
+      "to": "Watchwood Grove",
+      "type": "permanent"
+    },
+    {
+      "from": "Skullmarsh Upper",
+      "to": "Watchwood Bluffs",
+      "type": "permanent"
+    },
+    {
+      "from": "Skylake Bridge",
+      "to": "Floatshoal Fissure",
+      "type": "permanent"
+    },
+    {
+      "from": "Skylake Bridge",
+      "to": "Skylake Hinterlands",
+      "type": "permanent"
+    },
+    {
+      "from": "Skylake Hinterlands",
+      "to": "Floatshoal Floe",
+      "type": "permanent"
+    },
+    {
+      "from": "Skysand Plateau",
+      "to": "Everwinter Gorge",
+      "type": "permanent"
+    },
+    {
+      "from": "Skysand Plateau",
+      "to": "Everwinter Incline",
+      "type": "permanent"
+    },
+    {
+      "from": "Skysand Plateau",
+      "to": "Everwinter Plain",
+      "type": "permanent"
+    },
+    {
+      "from": "Skysand Ridge",
+      "to": "Everwinter Gap",
+      "type": "permanent"
+    },
+    {
+      "from": "Slakesands Canyon",
+      "to": "Slakesands Mesa",
+      "type": "permanent"
+    },
+    {
+      "from": "Sleetwater Basin",
+      "to": "Cairn Cloch",
+      "type": "permanent"
+    },
+    {
+      "from": "Sleetwater Basin",
+      "to": "Cairn Glascore",
+      "type": "permanent"
+    },
+    {
+      "from": "Sleetwater Basin",
+      "to": "Willowsigh Marsh",
+      "type": "permanent"
+    },
+    {
+      "from": "Slimehag",
+      "to": "Brent Knoll",
+      "type": "permanent"
+    },
+    {
+      "from": "Slimehag",
+      "to": "Highland Cross",
+      "type": "permanent"
+    },
+    {
+      "from": "Slithertail Marsh",
+      "to": "Falsestep Marsh",
+      "type": "permanent"
+    },
+    {
+      "from": "Slithertail Marsh",
+      "to": "Wanderlure Basin",
+      "type": "permanent"
+    },
+    {
+      "from": "Slowtree Plain",
+      "to": "Flatriver Trough",
+      "type": "permanent"
+    },
+    {
+      "from": "Slowtree Plain",
+      "to": "Lazygrass Plain",
+      "type": "permanent"
+    },
+    {
+      "from": "Smoothfloor Cleft",
+      "to": "Redstone Plain",
+      "type": "permanent"
+    },
+    {
+      "from": "Smoothfloor Cleft",
+      "to": "Vixen Tor",
+      "type": "permanent"
+    },
+    {
+      "from": "Snapshaft Trough",
+      "to": "Longshadow Plain",
+      "type": "permanent"
+    },
+    {
+      "from": "Southgrove Copse",
+      "to": "Sandrift Expanse",
+      "type": "permanent"
+    },
+    {
+      "from": "Southgrove Copse",
+      "to": "Southgrove Thicket",
+      "type": "permanent"
+    },
+    {
+      "from": "Southgrove Escarp",
+      "to": "Southgrove Copse",
+      "type": "permanent"
+    },
+    {
+      "from": "Southgrove Escarp",
+      "to": "Sunstrand Quicksands",
+      "type": "permanent"
+    },
+    {
+      "from": "Southgrove Thicket",
+      "to": "Sunstrand Quicksands",
+      "type": "permanent"
+    },
+    {
+      "from": "Southgrove Thicket",
+      "to": "Sunstrand Shoal",
+      "type": "permanent"
+    },
+    {
+      "from": "Spectral Sump",
+      "to": "Anklesnag Mire",
+      "type": "permanent"
+    },
+    {
+      "from": "Spectral Sump",
+      "to": "Cairn Fidair",
+      "type": "permanent"
+    },
+    {
+      "from": "Spectral Sump",
+      "to": "Cairn Glascore",
+      "type": "permanent"
+    },
+    {
+      "from": "Spectral Sump",
+      "to": "Creag Dhor",
+      "type": "permanent"
+    },
+    {
+      "from": "Spindlewood",
+      "to": "Goldshimmer Plain",
+      "type": "permanent"
+    },
+    {
+      "from": "Spindlewood",
+      "to": "Longshadow Plain",
+      "type": "permanent"
+    },
+    {
+      "from": "Springsump Basin",
+      "to": "Springsump Melt",
+      "type": "permanent"
+    },
+    {
+      "from": "Springsump Basin",
+      "to": "Springsump Wetland",
+      "type": "permanent"
+    },
+    {
+      "from": "Springsump Melt",
+      "to": "Dryvein Plain",
+      "type": "permanent"
+    },
+    {
+      "from": "Springsump Melt",
+      "to": "Frostspring Passage",
+      "type": "permanent"
+    },
+    {
+      "from": "Springsump Melt",
+      "to": "Sandrift Steppe",
+      "type": "permanent"
+    },
+    {
+      "from": "Springsump Wetland",
+      "to": "Dryvein Cross",
+      "type": "permanent"
+    },
+    {
+      "from": "Springsump Wetland",
+      "to": "Dryvein Riverbed",
+      "type": "permanent"
+    },
+    {
+      "from": "Stagbourne",
+      "to": "Cracked Earth",
+      "type": "permanent"
+    },
+    {
+      "from": "Steelhide Meadow",
+      "to": "Dryfield Meadow",
+      "type": "permanent"
+    },
+    {
+      "from": "Steelhide Meadow",
+      "to": "Sandgust Cleft",
+      "type": "permanent"
+    },
+    {
+      "from": "Steppe Cross",
+      "to": "Fractured Ground",
+      "type": "permanent"
+    },
+    {
+      "from": "Steppe Cross",
+      "to": "Goffers Knoll",
+      "type": "permanent"
+    },
+    {
+      "from": "Steppe Cross",
+      "to": "Prospector's Hope",
+      "type": "permanent"
+    },
+    {
+      "from": "Stinkhag",
+      "to": "Dusklight Fen",
+      "type": "permanent"
+    },
+    {
+      "from": "Stinkhag",
+      "to": "Fog Fen",
+      "type": "permanent"
+    },
+    {
+      "from": "Stonelake Fields",
+      "to": "Stonelake Hillock",
+      "type": "permanent"
+    },
+    {
+      "from": "Stonemouth Northbluff",
+      "to": "Stonemouth Bay",
+      "type": "permanent"
+    },
+    {
+      "from": "Stonemouth Northbluff",
+      "to": "Whitecliff Peak",
+      "type": "permanent"
+    },
+    {
+      "from": "Stumprot Swamp",
+      "to": "Bowscale Fell",
+      "type": "permanent"
+    },
+    {
+      "from": "Stumprot Swamp",
+      "to": "Dusktree Swamp",
+      "type": "permanent"
+    },
+    {
+      "from": "Stumprot Swamp",
+      "to": "Runnel Sink",
+      "type": "permanent"
+    },
+    {
+      "from": "Sunfang Approach",
+      "to": "Dryvein End",
+      "type": "permanent"
+    },
+    {
+      "from": "Sunfang Approach",
+      "to": "Sunfang Dawn",
+      "type": "permanent"
+    },
+    {
+      "from": "Sunfang Cliffs",
+      "to": "Razorrock Gulch",
+      "type": "permanent"
+    },
+    {
+      "from": "Sunfang Cliffs",
+      "to": "Sunfang Wasteland",
+      "type": "permanent"
+    },
+    {
+      "from": "Sunfang Dawn",
+      "to": "Battlebrae Grassland",
+      "type": "permanent"
+    },
+    {
+      "from": "Sunfang Dawn",
+      "to": "Razorrock Ravine",
+      "type": "permanent"
+    },
+    {
+      "from": "Sunfang Ravine",
+      "to": "Sunfang Approach",
+      "type": "permanent"
+    },
+    {
+      "from": "Sunfang Wasteland",
+      "to": "Razorrock Ravine",
+      "type": "permanent"
+    },
+    {
+      "from": "Sunfang Wasteland",
+      "to": "Wailing Bulwark",
+      "type": "permanent"
+    },
+    {
+      "from": "Sunkenbough Spring",
+      "to": "Dryvein End",
+      "type": "permanent"
+    },
+    {
+      "from": "Sunkenbough Spring",
+      "to": "Firesink Trench",
+      "type": "permanent"
+    },
+    {
+      "from": "Sunkenbough Woods",
+      "to": "Firesink Caldera",
+      "type": "permanent"
+    },
+    {
+      "from": "Sunkenbough Woods",
+      "to": "Rivercopse Curve",
+      "type": "permanent"
+    },
+    {
+      "from": "Sunkenbough Woods",
+      "to": "Sunkenbough Spring",
+      "type": "permanent"
+    },
+    {
+      "from": "Sunstrand Delta",
+      "to": "Stonemouth Southbluff",
+      "type": "permanent"
+    },
+    {
+      "from": "Sunstrand Delta",
+      "to": "Sunstrand Dunes",
+      "type": "permanent"
+    },
+    {
+      "from": "Sunstrand Dunes",
+      "to": "Sunstrand Quicksands",
+      "type": "permanent"
+    },
+    {
+      "from": "Sunstrand Quicksands",
+      "to": "Stonemouth Southbluff",
+      "type": "permanent"
+    },
+    {
+      "from": "Sunstrand Shoal",
+      "to": "Frostspring Volcano",
+      "type": "permanent"
+    },
+    {
+      "from": "Sunstrand Shoal",
+      "to": "Stonemouth Bay",
+      "type": "permanent"
+    },
+    {
+      "from": "Swamp Cross",
+      "to": "Chillhag",
+      "type": "permanent"
+    },
+    {
+      "from": "Swamp Cross",
+      "to": "Gwan Gorge",
+      "type": "permanent"
+    },
+    {
+      "from": "Swamp Cross",
+      "to": "Stinkhag",
+      "type": "permanent"
+    },
+    {
+      "from": "Swiftsands Plain",
+      "to": "Swiftsands Basin",
+      "type": "permanent"
+    },
+    {
+      "from": "Swiftsands Plain",
+      "to": "Swiftsands Chaparral",
+      "type": "permanent"
+    },
+    {
+      "from": "Tharcal Fissure",
+      "to": "Cairn Camain",
+      "type": "permanent"
+    },
+    {
+      "from": "Tharcal Fissure",
+      "to": "Cairn Darg",
+      "type": "permanent"
+    },
+    {
+      "from": "Thetford Portal",
+      "to": "Widemoor Delta",
+      "type": "permanent"
+    },
+    {
+      "from": "Thetford Portal",
+      "to": "Widemoor Estuary",
+      "type": "permanent"
+    },
+    {
+      "from": "Thetford Portal",
+      "to": "Widemoor Pool",
+      "type": "permanent"
+    },
+    {
+      "from": "Thetford Portal",
+      "to": "Widemoor Shore",
+      "type": "permanent"
+    },
+    {
+      "from": "Thetford Portal",
+      "to": "Willowshade Wetlands",
+      "type": "permanent"
+    },
+    {
+      "from": "Thetford",
+      "to": "Chillhag",
+      "type": "permanent"
+    },
+    {
+      "from": "Thetford",
+      "to": "Dusklight Fen",
+      "type": "permanent"
+    },
+    {
+      "from": "Thetford",
+      "to": "Thetford Portal",
+      "type": "permanent"
+    },
+    {
+      "from": "Thetford",
+      "to": "Willowsigh Marsh",
+      "type": "permanent"
+    },
+    {
+      "from": "Thetford",
+      "to": "Windripple Fen",
+      "type": "permanent"
+    },
+    {
+      "from": "Thirstwater Steppe",
+      "to": "Thirstwater Gully",
+      "type": "permanent"
+    },
+    {
+      "from": "Thirstwater Steppe",
+      "to": "Whitecliff Peak",
+      "type": "permanent"
+    },
+    {
+      "from": "Thirstwater Waste",
+      "to": "Firesink Caldera",
+      "type": "permanent"
+    },
+    {
+      "from": "Thirstwater Waste",
+      "to": "Thirstwater Gully",
+      "type": "permanent"
+    },
+    {
+      "from": "Thunderrock Ascent",
+      "to": "Thunderrock Draw",
+      "type": "permanent"
+    },
+    {
+      "from": "Thunderrock Draw",
+      "to": "Flammog Fork",
+      "type": "permanent"
+    },
+    {
+      "from": "Thunderrock Draw",
+      "to": "Iceburn Firth",
+      "type": "permanent"
+    },
+    {
+      "from": "Timberscar Copse",
+      "to": "Drytop Pillars",
+      "type": "permanent"
+    },
+    {
+      "from": "Timberslope Bridge",
+      "to": "Skylake Bridge",
+      "type": "permanent"
+    },
+    {
+      "from": "Timberslope Dell",
+      "to": "Floatshoal Bight",
+      "type": "permanent"
+    },
+    {
+      "from": "Timberslope Dell",
+      "to": "Swiftsands Basin",
+      "type": "permanent"
+    },
+    {
+      "from": "Timberslope Dell",
+      "to": "Timberslope Grove",
+      "type": "permanent"
+    },
+    {
+      "from": "Timberslope Grove",
+      "to": "Swiftsands Chaparral",
+      "type": "permanent"
+    },
+    {
+      "from": "Timberslope Grove",
+      "to": "Timberslope Bridge",
+      "type": "permanent"
+    },
+    {
+      "from": "Timbertop Dale",
+      "to": "Northstrand Beach",
+      "type": "permanent"
+    },
+    {
+      "from": "Timbertop Dale",
+      "to": "Timbertop Escarp",
+      "type": "permanent"
+    },
+    {
+      "from": "Timbertop Dale",
+      "to": "Timbertop Wood",
+      "type": "permanent"
+    },
+    {
+      "from": "Timbertop Escarp",
+      "to": "Shaleheath Hills",
+      "type": "permanent"
+    },
+    {
+      "from": "Timbertop Wood",
+      "to": "Northstrand Dunes",
+      "type": "permanent"
+    },
+    {
+      "from": "Twinchannel Narrows",
+      "to": "Highstone Mound",
+      "type": "permanent"
+    },
+    {
+      "from": "Twinchannel Narrows",
+      "to": "Unhallowed Cloister",
+      "type": "permanent"
+    },
+    {
+      "from": "Unhallowed Cloister",
+      "to": "Avalanche Ravine",
+      "type": "permanent"
+    },
+    {
+      "from": "Unhallowed Cloister",
+      "to": "Braemore Lowland",
+      "type": "permanent"
+    },
+    {
+      "from": "Vixen Tor",
+      "to": "Goffers Knoll",
+      "type": "permanent"
+    },
+    {
+      "from": "Vixen Tor",
+      "to": "Kilmar Tor",
+      "type": "permanent"
+    },
+    {
+      "from": "Wanderlure Basin",
+      "to": "Bowscale Fell",
+      "type": "permanent"
+    },
+    {
+      "from": "Wanderlure Basin",
+      "to": "Lewsdon Hill",
+      "type": "permanent"
+    },
+    {
+      "from": "Watchwood Bluffs",
+      "to": "Slakesands Mesa",
+      "type": "permanent"
+    },
+    {
+      "from": "Watchwood Grove",
+      "to": "Hightree Isle",
+      "type": "permanent"
+    },
+    {
+      "from": "Watchwood Grove",
+      "to": "Watchwood Bluffs",
+      "type": "permanent"
+    },
+    {
+      "from": "Watchwood Lakeside",
+      "to": "Munten Fell",
+      "type": "permanent"
+    },
+    {
+      "from": "Watchwood Precipice",
+      "to": "Munten Rise",
+      "type": "permanent"
+    },
+    {
+      "from": "Watchwood Precipice",
+      "to": "Watchwood Bluffs",
+      "type": "permanent"
+    },
+    {
+      "from": "Watchwood Precipice",
+      "to": "Watchwood Lakeside",
+      "type": "permanent"
+    },
+    {
+      "from": "Westweald Shore",
+      "to": "Frostbite Chasm",
+      "type": "permanent"
+    },
+    {
+      "from": "Westweald Shore",
+      "to": "Sandmount Strand",
+      "type": "permanent"
+    },
+    {
+      "from": "Westweald Thicket",
+      "to": "Frostbite Mountain",
+      "type": "permanent"
+    },
+    {
+      "from": "Westweald Thicket",
+      "to": "Westweald Shore",
+      "type": "permanent"
+    },
+    {
+      "from": "Wetgrave Bog",
+      "to": "Wetgrave Marsh",
+      "type": "permanent"
+    },
+    {
+      "from": "Wetgrave Bog",
+      "to": "Wetgrave Swale",
+      "type": "permanent"
+    },
+    {
+      "from": "Wetgrave Marsh",
+      "to": "Drybasin Riverbed",
+      "type": "permanent"
+    },
+    {
+      "from": "Wetgrave Marsh",
+      "to": "Flatrock Cliffs",
+      "type": "permanent"
+    },
+    {
+      "from": "Wetgrave Swale",
+      "to": "Swiftsands Chaparral",
+      "type": "permanent"
+    },
+    {
+      "from": "Wetgrave Swale",
+      "to": "Timberslope Bridge",
+      "type": "permanent"
+    },
+    {
+      "from": "Whitebank Cross",
+      "to": "Whitebank Wall",
+      "type": "permanent"
+    },
+    {
+      "from": "Whitebank Descent",
+      "to": "Whitebank Ridge",
+      "type": "permanent"
+    },
+    {
+      "from": "Whitebank Shore",
+      "to": "Frostpeak Ascent",
+      "type": "permanent"
+    },
+    {
+      "from": "Whitebank Stream",
+      "to": "Whitebank Ridge",
+      "type": "permanent"
+    },
+    {
+      "from": "Whitebank Stream",
+      "to": "Whitebank Wall",
+      "type": "permanent"
+    },
+    {
+      "from": "Whitecliff Peak",
+      "to": "Whitecliff Expanse",
+      "type": "permanent"
+    },
+    {
+      "from": "Whitepeak Ascent",
+      "to": "Whitepeak Spring",
+      "type": "permanent"
+    },
+    {
+      "from": "Whitewall Ridge",
+      "to": "Whitewall Pass",
+      "type": "permanent"
+    },
+    {
+      "from": "Widemoor Delta",
+      "to": "Widemoor Flats",
+      "type": "permanent"
+    },
+    {
+      "from": "Widemoor End",
+      "to": "Timberscar Copse",
+      "type": "permanent"
+    },
+    {
+      "from": "Widemoor End",
+      "to": "Timberscar Dell",
+      "type": "permanent"
+    },
+    {
+      "from": "Widemoor Estuary",
+      "to": "Widemoor Flats",
+      "type": "permanent"
+    },
+    {
+      "from": "Widemoor Estuary",
+      "to": "Widemoor Woods",
+      "type": "permanent"
+    },
+    {
+      "from": "Widemoor Fen",
+      "to": "Frostseep Ravine",
+      "type": "permanent"
+    },
+    {
+      "from": "Widemoor Flats",
+      "to": "Widemoor Fen",
+      "type": "permanent"
+    },
+    {
+      "from": "Widemoor Hills",
+      "to": "Drytop Riverbed",
+      "type": "permanent"
+    },
+    {
+      "from": "Widemoor Pool",
+      "to": "Widemoor End",
+      "type": "permanent"
+    },
+    {
+      "from": "Widemoor Pool",
+      "to": "Widemoor Hills",
+      "type": "permanent"
+    },
+    {
+      "from": "Widemoor Shore",
+      "to": "Widemoor Hills",
+      "type": "permanent"
+    },
+    {
+      "from": "Widemoor Woods",
+      "to": "Willowshade Hills",
+      "type": "permanent"
+    },
+    {
+      "from": "Willow Wood",
+      "to": "Deeproot Wood",
+      "type": "permanent"
+    },
+    {
+      "from": "Willow Wood",
+      "to": "Dryfield Meadow",
+      "type": "permanent"
+    },
+    {
+      "from": "Willow Wood",
+      "to": "Ferndell",
+      "type": "permanent"
+    },
+    {
+      "from": "Willow Wood",
+      "to": "Spindlewood",
+      "type": "permanent"
+    },
+    {
+      "from": "Willowshade Icemarsh",
+      "to": "Driftwood Glen",
+      "type": "permanent"
+    },
+    {
+      "from": "Willowshade Icemarsh",
+      "to": "Frostseep Ravine",
+      "type": "permanent"
+    },
+    {
+      "from": "Willowshade Icemarsh",
+      "to": "Unhallowed Cloister",
+      "type": "permanent"
+    },
+    {
+      "from": "Willowshade Lake",
+      "to": "Driftwood Glen",
+      "type": "permanent"
+    },
+    {
+      "from": "Willowshade Lake",
+      "to": "Willowshade Sink",
+      "type": "permanent"
+    },
+    {
+      "from": "Willowshade Mire",
+      "to": "Frostseep Crevasse",
+      "type": "permanent"
+    },
+    {
+      "from": "Willowshade Mire",
+      "to": "Willowshade Hills",
+      "type": "permanent"
+    },
+    {
+      "from": "Willowshade Mire",
+      "to": "Willowshade Lake",
+      "type": "permanent"
+    },
+    {
+      "from": "Willowshade Pools",
+      "to": "Timberscar Dell",
+      "type": "permanent"
+    },
+    {
+      "from": "Willowshade Pools",
+      "to": "Whitepeak Spring",
+      "type": "permanent"
+    },
+    {
+      "from": "Willowshade Sink",
+      "to": "Murdergulch Cross",
+      "type": "permanent"
+    },
+    {
+      "from": "Willowshade Sink",
+      "to": "Whitepeak Spring",
+      "type": "permanent"
+    },
+    {
+      "from": "Willowshade Wetlands",
+      "to": "Widemoor Woods",
+      "type": "permanent"
+    },
+    {
+      "from": "Willowshade Wetlands",
+      "to": "Willowshade Pools",
+      "type": "permanent"
+    },
+    {
+      "from": "Willowsigh Marsh",
+      "to": "Nightcreak Marsh",
+      "type": "permanent"
+    },
+    {
+      "from": "Windgrass Border",
+      "to": "Frostbite Mountain",
+      "type": "permanent"
+    },
+    {
+      "from": "Windgrass Border",
+      "to": "Windgrass Fields",
+      "type": "permanent"
+    },
+    {
+      "from": "Windgrass Gully",
+      "to": "Frostbite Mountain",
+      "type": "permanent"
+    },
+    {
+      "from": "Windgrass Gully",
+      "to": "Windgrass Coast",
+      "type": "permanent"
+    },
+    {
+      "from": "Windgrass Precipice",
+      "to": "Windgrass Coast",
+      "type": "permanent"
+    },
+    {
+      "from": "Windgrass Rill",
+      "to": "Windgrass Fields",
+      "type": "permanent"
+    },
+    {
+      "from": "Windgrass Rill",
+      "to": "Windgrass Terrace",
+      "type": "permanent"
+    },
+    {
+      "from": "Windripple Fen",
+      "to": "Drownhorse Basin",
+      "type": "permanent"
+    },
+    {
+      "from": "Windripple Fen",
+      "to": "Gwan Gorge",
+      "type": "permanent"
+    },
+    {
+      "from": "Wispwhisper Marsh",
+      "to": "Bonepool Marsh",
+      "type": "permanent"
+    },
+    {
+      "from": "Wispwhisper Marsh",
+      "to": "Falsestep Marsh",
+      "type": "permanent"
+    },
+    {
+      "from": "Wispwhisper Marsh",
+      "to": "Wanderlure Basin",
+      "type": "permanent"
+    },
+    {
+      "from": "Wyre Forest",
+      "to": "Caerleon",
+      "type": "permanent"
+    },
+    {
+      "from": "Wyre Forest",
+      "to": "Deadvein Gully",
+      "type": "permanent"
+    },
+    {
+      "from": "Yew Wood",
+      "to": "Aspenwood",
+      "type": "permanent"
+    },
+    {
+      "from": "Yew Wood",
+      "to": "Hornbeam Wood",
+      "type": "permanent"
+    }
+  ]
+}
