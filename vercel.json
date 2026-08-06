@@ -4,6 +4,8 @@
   "outputDirectory": "dist",
   "cleanUrls": true,
   "rewrites": [
+    { "source": "/health", "destination": "https://albion-route-api.onrender.com/health" },
+    { "source": "/api/:path*", "destination": "https://albion-route-api.onrender.com/api/:path*" },
     { "source": "/((?!.*\\.).*)", "destination": "/index.html" }
   ]
 }
