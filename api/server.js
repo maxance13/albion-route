@@ -13,6 +13,7 @@ const root = path.resolve(__dirname, "..");
 const app = express();
 const PORT = Number(process.env.PORT || 3001);
 const maps = JSON.parse(fs.readFileSync(path.join(root, "data", "maps.json"), "utf8"));
+const permanentNetwork = JSON.parse(fs.readFileSync(path.join(root, "data", "permanent-connections.json"), "utf8"));
 const mapNames = new Set(maps.map((map) => map.mapName));
 const pool = process.env.DATABASE_URL
   ? new pg.Pool({ connectionString: process.env.DATABASE_URL, ssl: { rejectUnauthorized: false }, max: 5 })
@@ -77,6 +78,9 @@ function collectGraph(config) {
 }
 
 async function getPermanentNetwork() {
+  if (permanentNetwork?.edges?.length) {
+    return { edges: permanentNetwork.edges, source: "static-game-data", updatedAt: Date.now() };
+  }
   if (Date.now() - permanentCache.updatedAt < 6 * 60 * 60 * 1000) return permanentCache;
   try {
     const response = await fetch("https://www.albiononline2d.com/en/map", {
