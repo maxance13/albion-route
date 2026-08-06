@@ -1,6 +1,8 @@
 const API_URL = location.hostname.endsWith(".onrender.com")
   ? location.origin
-  : (localStorage.getItem("albionRouteApi") || "https://albion-route-api.onrender.com");
+  : (location.hostname.endsWith(".vercel.app")
+    ? ""
+    : (localStorage.getItem("albionRouteApi") || "https://albion-route-api.onrender.com"));
 
 const state = { maps: [], portals: [], permanent: [], ownerToken: localStorage.getItem("albionOwnerToken") || crypto.randomUUID() };
 localStorage.setItem("albionOwnerToken", state.ownerToken);
