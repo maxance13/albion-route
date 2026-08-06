@@ -4,7 +4,13 @@ const API_URL = location.hostname.endsWith(".onrender.com")
     ? ""
     : (localStorage.getItem("albionRouteApi") || "https://albion-route-api.onrender.com"));
 
-const state = { maps: [], portals: [], permanent: [], ownerToken: localStorage.getItem("albionOwnerToken") || crypto.randomUUID() };
+const state = {
+  maps: [],
+  portals: [],
+  permanent: [],
+  gameServer: localStorage.getItem("albionGameServer") || "europe",
+  ownerToken: localStorage.getItem("albionOwnerToken") || crypto.randomUUID()
+};
 localStorage.setItem("albionOwnerToken", state.ownerToken);
 
 const $ = (id) => document.getElementById(id);
@@ -33,10 +39,100 @@ function showTab(id) {
   document.querySelectorAll(".tab-panel").forEach((p) => p.classList.toggle("active", p.id === id));
 }
 
+const portalLifeClass = (closesAt) => {
+  const minutes = (new Date(closesAt) - Date.now()) / 60000;
+  return minutes < 15 ? "life-short" : minutes < 60 ? "life-medium" : "life-long";
+};
+
+function renderPortalMap() {
+  const host = $("portalNetwork");
+  if (!host) return;
+  const query = $("networkSearch").value.trim().toLowerCase();
+  const capacity = Number($("networkCapacity").value || 0);
+  const edges = state.portals.filter((p) =>
+    (!capacity || p.capacity === capacity) &&
+    (!query || p.fromMap.toLowerCase().includes(query) || p.toMap.toLowerCase().includes(query))
+  );
+  const names = [...new Set(edges.flatMap((p) => [p.fromMap, p.toMap]))].sort();
+  $("networkCount").textContent = `${edges.length} passage${edges.length > 1 ? "s" : ""} actif${edges.length > 1 ? "s" : ""}`;
+  if (!edges.length) {
+    host.innerHTML = '<div class="network-empty">Aucun portail actif ne correspond aux filtres sur ce serveur.</div>';
+    return;
+  }
+
+  const width = 1100;
+  const height = Math.max(560, Math.ceil(names.length / 10) * 120);
+  const centerX = width / 2;
+  const centerY = height / 2;
+  const radiusX = Math.min(430, width * .39);
+  const radiusY = Math.min(Math.max(190, names.length * 11), height * .39);
+  const positions = new Map(names.map((name, index) => {
+    const angle = (Math.PI * 2 * index / names.length) - Math.PI / 2;
+    return [name, { x: centerX + Math.cos(angle) * radiusX, y: centerY + Math.sin(angle) * radiusY }];
+  }));
+
+  for (let iteration = 0; iteration < 70; iteration++) {
+    const forces = new Map(names.map((name) => [name, { x: 0, y: 0 }]));
+    for (let i = 0; i < names.length; i++) {
+      for (let j = i + 1; j < names.length; j++) {
+        const a = positions.get(names[i]), b = positions.get(names[j]);
+        const dx = a.x - b.x || .1, dy = a.y - b.y || .1;
+        const distanceSq = Math.max(1600, dx * dx + dy * dy);
+        const strength = 52000 / distanceSq;
+        const distance = Math.sqrt(distanceSq);
+        forces.get(names[i]).x += dx / distance * strength;
+        forces.get(names[i]).y += dy / distance * strength;
+        forces.get(names[j]).x -= dx / distance * strength;
+        forces.get(names[j]).y -= dy / distance * strength;
+      }
+    }
+    edges.forEach((edge) => {
+      const a = positions.get(edge.fromMap), b = positions.get(edge.toMap);
+      const dx = b.x - a.x, dy = b.y - a.y;
+      const distance = Math.max(1, Math.hypot(dx, dy));
+      const spring = (distance - 230) * .008;
+      forces.get(edge.fromMap).x += dx / distance * spring;
+      forces.get(edge.fromMap).y += dy / distance * spring;
+      forces.get(edge.toMap).x -= dx / distance * spring;
+      forces.get(edge.toMap).y -= dy / distance * spring;
+    });
+    names.forEach((name) => {
+      const p = positions.get(name), f = forces.get(name);
+      p.x = Math.max(100, Math.min(width - 100, p.x + f.x + (centerX - p.x) * .002));
+      p.y = Math.max(65, Math.min(height - 65, p.y + f.y + (centerY - p.y) * .002));
+    });
+  }
+
+  const edgeSvg = edges.map((edge) => {
+    const a = positions.get(edge.fromMap), b = positions.get(edge.toMap);
+    const mx = (a.x + b.x) / 2, my = (a.y + b.y) / 2;
+    const life = portalLifeClass(edge.closesAt);
+    return `<g class="network-edge ${life}">
+      <line x1="${a.x}" y1="${a.y}" x2="${b.x}" y2="${b.y}"></line>
+      <text x="${mx}" y="${my - 7}" data-map-closes="${edge.closesAt}" data-capacity="${edge.capacity}">${edge.capacity}p • ${remaining(edge.closesAt)}</text>
+      <title>${escapeHtml(edge.fromMap)} → ${escapeHtml(edge.toMap)} — ${edge.capacity} personnes</title>
+    </g>`;
+  }).join("");
+
+  const nodeSvg = names.map((name) => {
+    const p = positions.get(name);
+    const labelWidth = Math.min(210, Math.max(116, name.length * 7.4 + 28));
+    return `<g class="network-node" transform="translate(${p.x} ${p.y})" data-network-map="${escapeHtml(name)}" tabindex="0" role="button">
+      <rect x="${-labelWidth / 2}" y="-24" width="${labelWidth}" height="48" rx="13"></rect>
+      <text text-anchor="middle" y="5">${escapeHtml(name)}</text>
+    </g>`;
+  }).join("");
+
+  host.innerHTML = `<svg viewBox="0 0 ${width} ${height}" role="img" aria-label="Réseau des portails Avalon actifs">
+    <g class="edges">${edgeSvg}</g><g class="nodes">${nodeSvg}</g>
+  </svg>`;
+}
+
 function renderPortals() {
   const now = Date.now();
   state.portals = state.portals.filter((p) => new Date(p.closesAt).getTime() > now);
   $("portalCount").textContent = state.portals.length;
+  renderPortalMap();
   if (!state.portals.length) {
     $("portalList").innerHTML = '<div class="route-result empty">Aucun portail actif pour le moment.</div>';
     return;
@@ -51,7 +147,7 @@ function renderPortals() {
 
 async function loadPortals(silent = false) {
   try {
-    const data = await api("/api/portals");
+    const data = await api("/api/portals?server=" + encodeURIComponent(state.gameServer));
     state.portals = data.portals || [];
     renderPortals();
     if (!silent) toast("Portails actualisés");
@@ -142,6 +238,7 @@ async function boot() {
       api("/health"), api("/api/maps"), api("/api/permanent-connections").catch(() => ({ edges: [], source: "unavailable" }))
     ]);
     state.maps = mapData.maps;
+    $("gameServer").value = state.gameServer;
     state.permanent = network.edges || [];
     $("statusDot").parentElement.classList.add("online");
     $("apiStatus").textContent = health.database ? "Synchronisation active" : "Mode local";
@@ -173,7 +270,7 @@ $("portalForm").addEventListener("submit", async (event) => {
       body: JSON.stringify({
         fromMap: $("portalFrom").value.trim(), toMap: $("portalTo").value.trim(),
         capacity: Number($("capacity").value), closesAt: new Date(Date.now() + ms).toISOString(),
-        ownerToken: state.ownerToken
+        gameServer: state.gameServer, ownerToken: state.ownerToken
       })
     });
     toast("Portail enregistré et partagé");
@@ -190,13 +287,34 @@ $("portalList").addEventListener("click", async (event) => {
   } catch { toast("Seul l’auteur peut supprimer ce portail"); }
 });
 ["catalogSearch", "tierFilter", "shapeFilter"].forEach((id) => $(id).addEventListener("input", renderCatalog));
+["networkSearch", "networkCapacity"].forEach((id) => $(id).addEventListener("input", renderPortalMap));
+$("refreshNetwork").addEventListener("click", () => loadPortals());
+$("gameServer").addEventListener("change", async (event) => {
+  state.gameServer = event.target.value;
+  localStorage.setItem("albionGameServer", state.gameServer);
+  state.portals = [];
+  renderPortals();
+  await loadPortals(true);
+  toast("Serveur communautaire changé");
+});
+$("portalNetwork").addEventListener("click", (event) => {
+  const node = event.target.closest("[data-network-map]");
+  if (!node) return;
+  if (!$("routeFrom").value) $("routeFrom").value = node.dataset.networkMap;
+  else $("routeTo").value = node.dataset.networkMap;
+  showTab("route");
+  toast("Carte ajoutée au calculateur");
+});
 $("catalogGrid").addEventListener("click", (event) => {
   const card = event.target.closest("[data-map]"); if (!card) return;
   $("routeFrom").value = card.dataset.map; showTab("route"); toast("Carte définie comme départ");
 });
 setInterval(() => {
   document.querySelectorAll("[data-closes]").forEach((el) => el.textContent = remaining(el.dataset.closes));
+  document.querySelectorAll("[data-map-closes]").forEach((el) => {
+    el.textContent = `${el.dataset.capacity}p • ${remaining(el.dataset.mapCloses)}`;
+  });
   if (state.portals.some((p) => new Date(p.closesAt) <= Date.now())) renderPortals();
 }, 1000);
-setInterval(() => loadPortals(true), 30_000);
+setInterval(() => loadPortals(true), 15_000);
 boot();
