@@ -261,8 +261,14 @@ $("calculate").addEventListener("click", calculateRoute);
 $("refreshPortals").addEventListener("click", () => loadPortals());
 $("portalForm").addEventListener("submit", async (event) => {
   event.preventDefault();
-  const amount = Number($("duration").value);
-  const ms = amount * ($("durationUnit").value === "hours" ? 3_600_000 : 60_000);
+  const hours = Number($("durationHours").value);
+  const minutes = Number($("durationMinutes").value);
+  const totalMinutes = (hours * 60) + minutes;
+  if (!Number.isInteger(hours) || !Number.isInteger(minutes) || hours < 0 || hours > 23 || minutes < 0 || minutes > 59 || totalMinutes < 2) {
+    toast("Indique un temps entre 2 min et 23 h 59 min");
+    return;
+  }
+  const ms = totalMinutes * 60_000;
   try {
     await api("/api/portals", {
       method: "POST",
