@@ -33,6 +33,27 @@ const remaining = (date) => {
   return h ? `${h}h ${String(m).padStart(2, "0")}m` : `${m}m ${String(s).padStart(2, "0")}s`;
 };
 const escapeHtml = (value) => String(value).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+const FEATURE_LABELS = {
+  cotton: "Fibre",
+  hide: "Peaux",
+  logs: "Bois",
+  ore: "Minerai",
+  rock: "Pierre",
+  largeBlueChest: "Grand coffre bleu",
+  largeGoldChest: "Grand coffre doré",
+  largeGreenChest: "Grand coffre vert"
+};
+const readableFeatures = (map) => (map?.knownFeatures || []).map((feature) => FEATURE_LABELS[feature] || feature);
+const wrapFeatureLines = (features, maxLength = 38) => {
+  if (!features.length) return ["Contenu non renseigné"];
+  const lines = [];
+  features.forEach((feature) => {
+    const current = lines.at(-1);
+    if (!current || current.length + feature.length + 3 > maxLength) lines.push(feature);
+    else lines[lines.length - 1] += " • " + feature;
+  });
+  return lines;
+};
 
 function showTab(id) {
   document.querySelectorAll(".tab").forEach((b) => b.classList.toggle("active", b.dataset.tab === id));
@@ -60,12 +81,12 @@ function renderPortalMap() {
     return;
   }
 
-  const width = 1100;
-  const height = Math.max(560, Math.ceil(names.length / 10) * 120);
+  const width = 1200;
+  const height = Math.max(620, Math.ceil(names.length / 8) * 160);
   const centerX = width / 2;
   const centerY = height / 2;
-  const radiusX = Math.min(430, width * .39);
-  const radiusY = Math.min(Math.max(190, names.length * 11), height * .39);
+  const radiusX = Math.min(470, width * .4);
+  const radiusY = Math.min(Math.max(220, names.length * 16), height * .4);
   const positions = new Map(names.map((name, index) => {
     const angle = (Math.PI * 2 * index / names.length) - Math.PI / 2;
     return [name, { x: centerX + Math.cos(angle) * radiusX, y: centerY + Math.sin(angle) * radiusY }];
@@ -77,8 +98,8 @@ function renderPortalMap() {
       for (let j = i + 1; j < names.length; j++) {
         const a = positions.get(names[i]), b = positions.get(names[j]);
         const dx = a.x - b.x || .1, dy = a.y - b.y || .1;
-        const distanceSq = Math.max(1600, dx * dx + dy * dy);
-        const strength = 52000 / distanceSq;
+        const distanceSq = Math.max(9000, dx * dx + dy * dy);
+        const strength = 150000 / distanceSq;
         const distance = Math.sqrt(distanceSq);
         forces.get(names[i]).x += dx / distance * strength;
         forces.get(names[i]).y += dy / distance * strength;
@@ -90,7 +111,7 @@ function renderPortalMap() {
       const a = positions.get(edge.fromMap), b = positions.get(edge.toMap);
       const dx = b.x - a.x, dy = b.y - a.y;
       const distance = Math.max(1, Math.hypot(dx, dy));
-      const spring = (distance - 230) * .008;
+      const spring = (distance - 310) * .008;
       forces.get(edge.fromMap).x += dx / distance * spring;
       forces.get(edge.fromMap).y += dy / distance * spring;
       forces.get(edge.toMap).x -= dx / distance * spring;
@@ -98,8 +119,8 @@ function renderPortalMap() {
     });
     names.forEach((name) => {
       const p = positions.get(name), f = forces.get(name);
-      p.x = Math.max(100, Math.min(width - 100, p.x + f.x + (centerX - p.x) * .002));
-      p.y = Math.max(65, Math.min(height - 65, p.y + f.y + (centerY - p.y) * .002));
+      p.x = Math.max(150, Math.min(width - 150, p.x + f.x + (centerX - p.x) * .002));
+      p.y = Math.max(80, Math.min(height - 80, p.y + f.y + (centerY - p.y) * .002));
     });
   }
 
@@ -116,10 +137,27 @@ function renderPortalMap() {
 
   const nodeSvg = names.map((name) => {
     const p = positions.get(name);
-    const labelWidth = Math.min(210, Math.max(116, name.length * 7.4 + 28));
-    return `<g class="network-node" transform="translate(${p.x} ${p.y})" data-network-map="${escapeHtml(name)}" tabindex="0" role="button">
-      <rect x="${-labelWidth / 2}" y="-24" width="${labelWidth}" height="48" rx="13"></rect>
-      <text text-anchor="middle" y="5">${escapeHtml(name)}</text>
+    const map = state.maps.find((item) => item.mapName === name);
+    const isAvalon = map?.mapType === "roads";
+    const featureLines = isAvalon ? wrapFeatureLines(readableFeatures(map)) : [];
+    const labelWidth = isAvalon ? 268 : Math.min(240, Math.max(150, name.length * 7.4 + 30));
+    const nodeHeight = isAvalon ? 68 + featureLines.length * 14 : 58;
+    const top = -nodeHeight / 2;
+    const meta = isAvalon
+      ? `T${map.tier || "?"} • Forme ${String(map.mapShape || "?").toUpperCase()} • ${map.socketCount || "?"} sorties`
+      : "Zone continentale";
+    const features = featureLines.map((line, index) =>
+      `<text class="node-feature" text-anchor="middle" y="${top + 58 + index * 14}">${escapeHtml(line)}</text>`
+    ).join("");
+    const title = isAvalon
+      ? `${name} — ${meta} — ${readableFeatures(map).join(", ") || "contenu non renseigné"}`
+      : `${name} — Zone continentale`;
+    return `<g class="network-node ${isAvalon ? "avalon-zone" : "continent-zone"}" transform="translate(${p.x} ${p.y})" data-network-map="${escapeHtml(name)}" tabindex="0" role="button">
+      <rect x="${-labelWidth / 2}" y="${top}" width="${labelWidth}" height="${nodeHeight}" rx="15"></rect>
+      <text class="node-name" text-anchor="middle" y="${top + 23}">${escapeHtml(name)}</text>
+      <text class="node-meta" text-anchor="middle" y="${top + 42}">${escapeHtml(meta)}</text>
+      ${features}
+      <title>${escapeHtml(title)}</title>
     </g>`;
   }).join("");
 
@@ -172,7 +210,7 @@ function renderCatalog() {
     <article class="map-card" data-map="${escapeHtml(m.mapName)}">
       <h3>${escapeHtml(m.mapName)}</h3>
       <div class="map-meta"><span>T${m.tier}</span><span>Forme ${String(m.mapShape || "?").toUpperCase()}</span><span>${m.socketCount || "?"} sorties</span></div>
-      <div class="features">${(m.knownFeatures || []).map(escapeHtml).join(" • ") || "Caractéristiques non renseignées"}</div>
+      <div class="features">${readableFeatures(m).map(escapeHtml).join(" • ") || "Caractéristiques non renseignées"}</div>
     </article>`).join("");
 }
 
