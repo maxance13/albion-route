@@ -27,9 +27,14 @@ const writes = rateLimit({ windowMs: 60_000, limit: 30, standardHeaders: true, l
 const sha = (value) => crypto.createHash("sha256").update(value).digest("hex");
 const clean = (value) => String(value || "").trim().slice(0, 100);
 const GAME_SERVERS = new Set(["europe", "americas", "asia"]);
+const PORTAL_DIRECTIONS = new Set(["ne", "nw", "se", "sw"]);
 const normalizeServer = (value) => {
   const server = clean(value || "europe").toLowerCase();
   return GAME_SERVERS.has(server) ? server : null;
+};
+const normalizeDirection = (value) => {
+  const direction = clean(value).toLowerCase();
+  return PORTAL_DIRECTIONS.has(direction) ? direction : null;
 };
 
 async function ensureSchema() {
@@ -41,6 +46,8 @@ async function ensureSchema() {
     to_map text NOT NULL,
     game_server text NOT NULL DEFAULT \'europe\',
     capacity smallint NOT NULL CHECK (capacity IN (7, 20)),
+    from_direction text CHECK (from_direction IN ('ne', 'nw', 'se', 'sw')),
+    to_direction text CHECK (to_direction IN ('ne', 'nw', 'se', 'sw')),
     closes_at timestamptz NOT NULL,
     owner_token_hash text NOT NULL,
     created_at timestamptz NOT NULL DEFAULT now(),
@@ -48,6 +55,8 @@ async function ensureSchema() {
     CHECK (from_map <> to_map)
   )`);
   await pool.query(`ALTER TABLE avalon_portals ADD COLUMN IF NOT EXISTS game_server text NOT NULL DEFAULT 'europe'`);
+  await pool.query(`ALTER TABLE avalon_portals ADD COLUMN IF NOT EXISTS from_direction text`);
+  await pool.query(`ALTER TABLE avalon_portals ADD COLUMN IF NOT EXISTS to_direction text`);
   await pool.query(`CREATE INDEX IF NOT EXISTS avalon_portals_closes_at_idx ON avalon_portals (closes_at)`);
   await pool.query(`CREATE INDEX IF NOT EXISTS avalon_portals_server_closes_idx ON avalon_portals (game_server, closes_at)`);
 }
@@ -130,7 +139,9 @@ app.get("/api/portals", async (req, res) => {
   if (!pool) return res.json({ portals: [], persistence: false, gameServer });
   await pool.query("DELETE FROM avalon_portals WHERE closes_at <= now()");
   const result = await pool.query(`SELECT id, from_map AS "fromMap", to_map AS "toMap",
-    game_server AS "gameServer", capacity, closes_at AS "closesAt", created_at AS "createdAt"
+    game_server AS "gameServer", capacity,
+    from_direction AS "fromDirection", to_direction AS "toDirection",
+    closes_at AS "closesAt", created_at AS "createdAt"
     FROM avalon_portals
     WHERE game_server = $1 AND closes_at > now()
     ORDER BY closes_at ASC`, [gameServer]);
@@ -144,11 +155,13 @@ app.post("/api/portals", writes, async (req, res) => {
   const ownerToken = clean(req.body.ownerToken);
   const capacity = Number(req.body.capacity);
   const gameServer = normalizeServer(req.body.gameServer);
+  const fromDirection = normalizeDirection(req.body.fromDirection);
+  const toDirection = normalizeDirection(req.body.toDirection);
   const closesAt = new Date(req.body.closesAt);
   if (!mapNames.has(fromMap) || !mapNames.has(toMap) || fromMap === toMap) {
     return res.status(400).json({ error: "invalid_maps" });
   }
-  if (!gameServer || ![7, 20].includes(capacity) || ownerToken.length < 16 || Number.isNaN(closesAt.getTime())) {
+  if (!gameServer || !fromDirection || !toDirection || ![7, 20].includes(capacity) || ownerToken.length < 16 || Number.isNaN(closesAt.getTime())) {
     return res.status(400).json({ error: "invalid_portal" });
   }
   const remaining = closesAt.getTime() - Date.now();
@@ -156,11 +169,13 @@ app.post("/api/portals", writes, async (req, res) => {
     return res.status(400).json({ error: "invalid_expiration" });
   }
   const result = await pool.query(`INSERT INTO avalon_portals
-    (from_map, to_map, game_server, capacity, closes_at, owner_token_hash)
-    VALUES ($1, $2, $3, $4, $5, $6)
+    (from_map, to_map, game_server, capacity, from_direction, to_direction, closes_at, owner_token_hash)
+    VALUES ($1, $2, $3, $4, $5, $6, $7, $8)
     RETURNING id, from_map AS "fromMap", to_map AS "toMap",
-      game_server AS "gameServer", capacity, closes_at AS "closesAt", created_at AS "createdAt"`,
-    [fromMap, toMap, gameServer, capacity, closesAt.toISOString(), sha(ownerToken)]);
+      game_server AS "gameServer", capacity,
+      from_direction AS "fromDirection", to_direction AS "toDirection",
+      closes_at AS "closesAt", created_at AS "createdAt"`,
+    [fromMap, toMap, gameServer, capacity, fromDirection, toDirection, closesAt.toISOString(), sha(ownerToken)]);
   res.status(201).json({ portal: result.rows[0] });
 });
 
