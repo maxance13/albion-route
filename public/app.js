@@ -80,7 +80,7 @@ function layoutPortalGrid(names, edges) {
   edges.forEach((edge) => {
     const directions = portalDirections(edge);
     adjacency.get(edge.fromMap)?.push({ name: edge.toMap, direction: directions.from });
-    adjacency.get(edge.toMap)?.push({ name: edge.fromMap, direction: directions.to });
+    adjacency.get(edge.toMap)?.push({ name: edge.fromMap, direction: OPPOSITE_DIRECTION[directions.from] });
   });
 
   const grid = new Map();
