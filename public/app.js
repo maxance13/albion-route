@@ -55,6 +55,90 @@ const wrapFeatureLines = (features, maxLength = 38) => {
   return lines;
 };
 
+const DIRECTION_VECTORS = {
+  ne: { x: 1, y: -1 },
+  nw: { x: -1, y: -1 },
+  se: { x: 1, y: 1 },
+  sw: { x: -1, y: 1 }
+};
+const DIRECTION_LABELS = { ne: "NE ↗", nw: "NO ↖", se: "SE ↘", sw: "SO ↙" };
+const OPPOSITE_DIRECTION = { ne: "sw", nw: "se", se: "nw", sw: "ne" };
+const stableDirection = (seed) => {
+  let hash = 0;
+  for (const character of seed) hash = ((hash << 5) - hash + character.charCodeAt(0)) | 0;
+  return ["ne", "se", "sw", "nw"][Math.abs(hash) % 4];
+};
+const portalDirections = (edge) => {
+  const validFrom = DIRECTION_VECTORS[edge.fromDirection] ? edge.fromDirection : null;
+  const validTo = DIRECTION_VECTORS[edge.toDirection] ? edge.toDirection : null;
+  const from = validFrom || (validTo ? OPPOSITE_DIRECTION[validTo] : stableDirection(edge.fromMap + "|" + edge.toMap));
+  return { from, to: validTo || OPPOSITE_DIRECTION[from], automatic: !validFrom || !validTo };
+};
+
+function layoutPortalGrid(names, edges) {
+  const adjacency = new Map(names.map((name) => [name, []]));
+  edges.forEach((edge) => {
+    const directions = portalDirections(edge);
+    adjacency.get(edge.fromMap)?.push({ name: edge.toMap, direction: directions.from });
+    adjacency.get(edge.toMap)?.push({ name: edge.fromMap, direction: directions.to });
+  });
+
+  const grid = new Map();
+  const visited = new Set();
+  let componentOffsetX = 0;
+  names.forEach((root) => {
+    if (visited.has(root)) return;
+    const local = new Map([[root, { x: 0, y: 0 }]]);
+    const occupied = new Set(["0,0"]);
+    const queue = [root];
+    visited.add(root);
+    while (queue.length) {
+      const current = queue.shift();
+      const currentPosition = local.get(current);
+      for (const link of adjacency.get(current) || []) {
+        if (local.has(link.name)) continue;
+        const vector = DIRECTION_VECTORS[link.direction];
+        let step = 1;
+        let candidate = { x: currentPosition.x + vector.x, y: currentPosition.y + vector.y };
+        while (occupied.has(candidate.x + "," + candidate.y)) {
+          step += 1;
+          candidate = { x: currentPosition.x + vector.x * step, y: currentPosition.y + vector.y * step };
+        }
+        local.set(link.name, candidate);
+        occupied.add(candidate.x + "," + candidate.y);
+        visited.add(link.name);
+        queue.push(link.name);
+      }
+    }
+    const localPoints = [...local.values()];
+    const localMinX = Math.min(...localPoints.map((point) => point.x));
+    const localMaxX = Math.max(...localPoints.map((point) => point.x));
+    local.forEach((point, name) => grid.set(name, { x: point.x - localMinX + componentOffsetX, y: point.y }));
+    componentOffsetX += localMaxX - localMinX + 4;
+  });
+
+  const points = [...grid.values()];
+  const minX = Math.min(...points.map((point) => point.x));
+  const maxX = Math.max(...points.map((point) => point.x));
+  const minY = Math.min(...points.map((point) => point.y));
+  const maxY = Math.max(...points.map((point) => point.y));
+  const cellX = 340;
+  const cellY = 190;
+  const paddingX = 180;
+  const paddingY = 110;
+  const positions = new Map([...grid].map(([name, point]) => [name, {
+    x: (point.x - minX) * cellX + paddingX,
+    y: (point.y - minY) * cellY + paddingY
+  }]));
+  return {
+    positions,
+    width: Math.max(1000, (maxX - minX) * cellX + paddingX * 2),
+    height: Math.max(620, (maxY - minY) * cellY + paddingY * 2),
+    cellX,
+    cellY
+  };
+}
+
 function showTab(id) {
   document.querySelectorAll(".tab").forEach((b) => b.classList.toggle("active", b.dataset.tab === id));
   document.querySelectorAll(".tab-panel").forEach((p) => p.classList.toggle("active", p.id === id));
@@ -81,57 +165,20 @@ function renderPortalMap() {
     return;
   }
 
-  const width = 1200;
-  const height = Math.max(620, Math.ceil(names.length / 8) * 160);
-  const centerX = width / 2;
-  const centerY = height / 2;
-  const radiusX = Math.min(470, width * .4);
-  const radiusY = Math.min(Math.max(220, names.length * 16), height * .4);
-  const positions = new Map(names.map((name, index) => {
-    const angle = (Math.PI * 2 * index / names.length) - Math.PI / 2;
-    return [name, { x: centerX + Math.cos(angle) * radiusX, y: centerY + Math.sin(angle) * radiusY }];
-  }));
-
-  for (let iteration = 0; iteration < 70; iteration++) {
-    const forces = new Map(names.map((name) => [name, { x: 0, y: 0 }]));
-    for (let i = 0; i < names.length; i++) {
-      for (let j = i + 1; j < names.length; j++) {
-        const a = positions.get(names[i]), b = positions.get(names[j]);
-        const dx = a.x - b.x || .1, dy = a.y - b.y || .1;
-        const distanceSq = Math.max(9000, dx * dx + dy * dy);
-        const strength = 150000 / distanceSq;
-        const distance = Math.sqrt(distanceSq);
-        forces.get(names[i]).x += dx / distance * strength;
-        forces.get(names[i]).y += dy / distance * strength;
-        forces.get(names[j]).x -= dx / distance * strength;
-        forces.get(names[j]).y -= dy / distance * strength;
-      }
-    }
-    edges.forEach((edge) => {
-      const a = positions.get(edge.fromMap), b = positions.get(edge.toMap);
-      const dx = b.x - a.x, dy = b.y - a.y;
-      const distance = Math.max(1, Math.hypot(dx, dy));
-      const spring = (distance - 310) * .008;
-      forces.get(edge.fromMap).x += dx / distance * spring;
-      forces.get(edge.fromMap).y += dy / distance * spring;
-      forces.get(edge.toMap).x -= dx / distance * spring;
-      forces.get(edge.toMap).y -= dy / distance * spring;
-    });
-    names.forEach((name) => {
-      const p = positions.get(name), f = forces.get(name);
-      p.x = Math.max(150, Math.min(width - 150, p.x + f.x + (centerX - p.x) * .002));
-      p.y = Math.max(80, Math.min(height - 80, p.y + f.y + (centerY - p.y) * .002));
-    });
-  }
+  const { positions, width, height, cellX, cellY } = layoutPortalGrid(names, edges);
 
   const edgeSvg = edges.map((edge) => {
     const a = positions.get(edge.fromMap), b = positions.get(edge.toMap);
     const mx = (a.x + b.x) / 2, my = (a.y + b.y) / 2;
+    const dx = b.x - a.x, dy = b.y - a.y;
+    const directions = portalDirections(edge);
     const life = portalLifeClass(edge.closesAt);
     return `<g class="network-edge ${life}">
       <line x1="${a.x}" y1="${a.y}" x2="${b.x}" y2="${b.y}"></line>
       <text x="${mx}" y="${my - 7}" data-map-closes="${edge.closesAt}" data-capacity="${edge.capacity}">${edge.capacity}p • ${remaining(edge.closesAt)}</text>
-      <title>${escapeHtml(edge.fromMap)} → ${escapeHtml(edge.toMap)} — ${edge.capacity} personnes</title>
+      <text class="network-direction" x="${a.x + dx * .22}" y="${a.y + dy * .22 - 9}">${edge.fromDirection ? DIRECTION_LABELS[directions.from] : "Auto"}</text>
+      <text class="network-direction" x="${b.x - dx * .22}" y="${b.y - dy * .22 - 9}">${edge.toDirection ? DIRECTION_LABELS[directions.to] : "Auto"}</text>
+      <title>${escapeHtml(edge.fromMap)} ${DIRECTION_LABELS[directions.from]} ↔ ${escapeHtml(edge.toMap)} ${DIRECTION_LABELS[directions.to]} — ${edge.capacity} personnes</title>
     </g>`;
   }).join("");
 
@@ -161,7 +208,9 @@ function renderPortalMap() {
     </g>`;
   }).join("");
 
-  host.innerHTML = `<svg viewBox="0 0 ${width} ${height}" role="img" aria-label="Réseau des portails Avalon actifs">
+  host.innerHTML = `<svg viewBox="0 0 ${width} ${height}" role="img" aria-label="Réseau directionnel des portails Avalon actifs">
+    <defs><pattern id="communityGrid" width="${cellX / 2}" height="${cellY / 2}" patternUnits="userSpaceOnUse"><path d="M ${cellX / 2} 0 L 0 0 0 ${cellY / 2}"></path></pattern></defs>
+    <rect class="network-grid-bg" width="100%" height="100%" fill="url(#communityGrid)"></rect>
     <g class="edges">${edgeSvg}</g><g class="nodes">${nodeSvg}</g>
   </svg>`;
 }
@@ -177,7 +226,7 @@ function renderPortals() {
   }
   $("portalList").innerHTML = state.portals.map((p) => `
     <article class="portal-card">
-      <div><strong>${escapeHtml(p.fromMap)} → ${escapeHtml(p.toMap)}</strong><small>Portail Avalon • ${p.capacity} personnes</small></div>
+      <div><strong>${escapeHtml(p.fromMap)} → ${escapeHtml(p.toMap)}</strong><small>Portail Avalon • ${p.capacity} personnes • ${p.fromDirection ? DIRECTION_LABELS[p.fromDirection] : "Auto"} → ${p.toDirection ? DIRECTION_LABELS[p.toDirection] : "Auto"}</small></div>
       <span class="countdown" data-closes="${p.closesAt}">${remaining(p.closesAt)}</span>
       <button class="delete" data-delete="${p.id}">Supprimer</button>
     </article>`).join("");
@@ -313,6 +362,7 @@ $("portalForm").addEventListener("submit", async (event) => {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         fromMap: $("portalFrom").value.trim(), toMap: $("portalTo").value.trim(),
+        fromDirection: $("fromDirection").value, toDirection: $("toDirection").value,
         capacity: Number($("capacity").value), closesAt: new Date(Date.now() + ms).toISOString(),
         gameServer: state.gameServer, ownerToken: state.ownerToken
       })
