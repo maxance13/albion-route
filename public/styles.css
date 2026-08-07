@@ -7,3 +7,12 @@
 @media(max-width:760px){.header-actions{align-items:flex-end;flex-direction:column;gap:7px}.server-picker{font-size:.68rem}.network-tools{grid-template-columns:1fr}.portal-network{min-height:420px}.portal-network svg{min-height:420px}.network-empty{min-height:420px}}
 
 .exact-duration{display:grid;grid-template-columns:minmax(62px,1fr) auto minmax(62px,1fr) auto;align-items:center;gap:8px}.exact-duration input{text-align:center;min-width:0}.exact-duration span{color:var(--muted);font-weight:800}.field-help{display:block;margin-top:7px;color:var(--muted);font-size:.72rem;line-height:1.35}
+
+/* Avalon contents inside community graph nodes */
+.portal-network svg{min-width:920px}
+.network-node.avalon-zone rect{fill:#13251f;stroke:#8b71bd}
+.network-node.continent-zone rect{fill:#1a211e;stroke:#66736c}
+.network-node .node-name{fill:#f3f7f4;font-size:14px;font-weight:850}
+.network-node .node-meta{fill:#e2c779;font-size:11px;font-weight:750;letter-spacing:.02em}
+.network-node .node-feature{fill:#a9cabc;font-size:10.5px;font-weight:650}
+.network-node.avalon-zone:hover rect,.network-node.avalon-zone:focus rect{fill:#1c332a;stroke:#b49add}
