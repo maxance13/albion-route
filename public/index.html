@@ -61,6 +61,24 @@
       <form id="portalForm" class="portal-form">
         <label>Depuis<input id="portalFrom" list="allMaps" required placeholder="Carte actuelle"></label>
         <label>Vers<input id="portalTo" list="allMaps" required placeholder="Destination du portail"></label>
+        <label>Position sur la carte actuelle
+          <select id="fromDirection" required>
+            <option value="">Choisir une direction…</option>
+            <option value="nw">Nord-ouest ↖</option>
+            <option value="ne">Nord-est ↗</option>
+            <option value="sw">Sud-ouest ↙</option>
+            <option value="se">Sud-est ↘</option>
+          </select>
+        </label>
+        <label>Position sur la carte d’arrivée
+          <select id="toDirection" required>
+            <option value="">Choisir une direction…</option>
+            <option value="nw">Nord-ouest ↖</option>
+            <option value="ne">Nord-est ↗</option>
+            <option value="sw">Sud-ouest ↙</option>
+            <option value="se">Sud-est ↘</option>
+          </select>
+        </label>
         <label>Capacité<select id="capacity"><option value="7">7 personnes</option><option value="20">20 personnes</option></select></label>
         <label>Temps restant exact
           <div class="duration exact-duration">
@@ -92,7 +110,7 @@
         <div><span class="step">04</span><h2>Carte communautaire des portails</h2></div>
         <span id="networkCount">0 passage actif</span>
       </div>
-      <p class="network-intro">Tous les portails signalés par les joueurs apparaissent ici. Chaque zone d’Avalon affiche son tier, sa forme, ses sorties, ses ressources et ses coffres. La carte s’actualise automatiquement.</p>
+      <p class="network-intro">Tous les portails signalés par les joueurs apparaissent sur un quadrillage directionnel. Les zones sont placées selon la sortie nord-est, nord-ouest, sud-est ou sud-ouest indiquée en jeu. Chaque zone affiche aussi son tier, sa forme, ses sorties, ses ressources et ses coffres.</p>
       <div class="network-tools">
         <input id="networkSearch" placeholder="Rechercher une carte…">
         <select id="networkCapacity">
@@ -107,6 +125,10 @@
         <span><i class="life-long"></i> Plus d'une heure</span>
         <span><i class="life-medium"></i> 15 à 60 minutes</span>
         <span><i class="life-short"></i> Moins de 15 minutes</span>
+        <span class="direction-key">↖ NO</span>
+        <span class="direction-key">↗ NE</span>
+        <span class="direction-key">↙ SO</span>
+        <span class="direction-key">↘ SE</span>
       </div>
       <p class="network-hint">Clique sur une carte du graphe pour la sélectionner dans le calculateur d'itinéraire.</p>
     </section>
