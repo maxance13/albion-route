@@ -1,20 +1,17 @@
 {
-  "name": "albion-route",
+  "name": "albion-guild-manager",
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "scripts": {
-    "start": "node api/server.js",
-    "build": "node --check public/app.js && node scripts/build-static.js"
-  },
-  "engines": {
-    "node": ">=20"
-  },
+  "engines": {"node": ">=20"},
+  "scripts": {"start": "node api/server.js", "build": "node --check api/server.js && node --check public/app.js"},
   "dependencies": {
-    "cors": "^2.8.5",
+    "bcryptjs": "^3.0.2",
     "express": "^5.1.0",
-    "express-rate-limit": "^8.1.0",
+    "express-rate-limit": "^7.5.0",
     "helmet": "^8.1.0",
-    "pg": "^8.16.3"
+    "jsonwebtoken": "^9.0.2",
+    "pg": "^8.13.3",
+    "zod": "^3.24.2"
   }
 }
