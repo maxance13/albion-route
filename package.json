@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "start": "node api/server.js",
+    "start": "mkdir -p public/guild && base64 -d guild-runtime.tar.gz.b64 | tar -xz -C . && node api/server.guild.js",
     "build": "node --check public/app.js && node scripts/build-static.js"
   },
   "engines": {
